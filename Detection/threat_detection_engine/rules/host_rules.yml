@@ -1,0 +1,135 @@
+# Host-side rules: Linux, Windows, File/Audit, Endpoint/EDR
+rules:
+  - id: LNX-001
+    name: SSH brute force
+    severity: high
+    type: threshold
+    log_type: linux
+    conditions: {message|contains: Failed password}
+    group_by: [src_ip]
+    threshold: 6
+    window: 60
+    mitre: [T1110]
+    description: 6+ failed SSH logins from one IP in 60 seconds.
+    recommendation: Block the IP, enforce key-only SSH, deploy fail2ban.
+
+  - id: LNX-002
+    name: Sensitive file read (shadow / ssh keys)
+    severity: high
+    type: match
+    log_type: linux
+    conditions:
+      message|regex: '(/etc/shadow|id_rsa|authorized_keys)'
+    group_by: [host, user]
+    mitre: [T1003.008, T1552.004]
+    description: A process accessed credential files.
+    recommendation: Verify the user and process; rotate credentials if unexpected.
+
+  - id: LNX-003
+    name: Reverse shell command
+    severity: critical
+    type: match
+    log_type: linux
+    conditions:
+      message|regex: '(bash -i >&|/dev/tcp/|nc (-e|-c)|mkfifo /tmp)'
+    group_by: [host, user]
+    mitre: [T1059.004]
+    description: A command line typical of a reverse shell was executed.
+    recommendation: Isolate the host and capture memory/process data.
+
+  - id: WIN-001
+    name: Windows event log cleared
+    severity: critical
+    type: match
+    log_type: windows
+    conditions: {event_id: [1102, 104]}
+    group_by: [host, user]
+    mitre: [T1070.001]
+    description: Audit log was cleared, a common attacker cleanup step.
+    recommendation: Treat the host as compromised; collect forensic evidence.
+
+  - id: WIN-002
+    name: User added to privileged group
+    severity: high
+    type: match
+    log_type: windows
+    conditions: {event_id: [4728, 4732, 4756]}
+    group_by: [host, user]
+    mitre: [T1098]
+    description: Account was added to a security-enabled group.
+    recommendation: Confirm there is an approved change ticket.
+
+  - id: WIN-003
+    name: New local account created
+    severity: medium
+    type: match
+    log_type: windows
+    conditions: {event_id: 4720}
+    group_by: [host, user]
+    mitre: [T1136.001]
+    description: A new user account was created.
+    recommendation: Verify with the system owner.
+
+  - id: FILE-001
+    name: Ransomware - mass file modification
+    severity: critical
+    type: threshold
+    log_type: file_audit
+    conditions: {action: [modify, rename, write]}
+    group_by: [host, user]
+    threshold: 50
+    window: 30
+    mitre: [T1486]
+    description: 50+ file changes in 30 seconds by one user - typical of encryption.
+    recommendation: Disconnect the host from the network NOW.
+
+  - id: FILE-002
+    name: Ransomware file extension
+    severity: critical
+    type: match
+    log_type: file_audit
+    conditions:
+      file_path|regex: '\.(locked|encrypted|crypt|ryk|lockbit)$'
+    group_by: [host]
+    mitre: [T1486]
+    description: A file was created or renamed with a ransomware-style extension.
+    recommendation: Disconnect the host and start the ransomware playbook.
+
+  - id: EDR-001
+    name: Encoded PowerShell command
+    severity: high
+    type: match
+    log_type: endpoint_edr
+    conditions:
+      process_name|contains: powershell
+      command_line|regex: '(-enc|-encodedcommand|frombase64string)'
+    group_by: [host, user]
+    mitre: [T1059.001, T1027]
+    description: PowerShell was run with an encoded payload.
+    recommendation: Decode the command and inspect parent process.
+
+  - id: EDR-002
+    name: Credential dumping (LSASS / Mimikatz)
+    severity: critical
+    type: match
+    log_type: endpoint_edr
+    any_of:
+      - {command_line|contains_any: [mimikatz, sekurlsa, lsass.dmp]}
+      - {process_name|contains: procdump, command_line|contains: lsass}
+    group_by: [host, user]
+    mitre: [T1003.001]
+    description: A tool or command used to steal credentials from memory.
+    recommendation: Isolate the host and reset exposed credentials.
+
+  - id: EDR-003
+    name: Office application spawned a shell
+    severity: high
+    type: match
+    log_type: endpoint_edr
+    conditions:
+      parent_process: [winword.exe, excel.exe, outlook.exe, powerpnt.exe]
+      process_name: [cmd.exe, powershell.exe, wscript.exe, mshta.exe]
+    group_by: [host, user]
+    mitre: [T1204.002, T1059]
+    description: A document likely launched malicious code (macro / exploit).
+    recommendation: Quarantine the document and investigate the host.

@@ -1,0 +1,158 @@
+# Identity and application rules: Authentication, Web Server, Application
+rules:
+  - id: AUTH-001
+    name: Authentication brute force
+    severity: high
+    type: threshold
+    log_type: authentication
+    conditions: {status: failure}
+    group_by: [src_ip]
+    threshold: 8
+    window: 120
+    mitre: [T1110.001]
+    description: 8+ failed logins from one IP within two minutes.
+    recommendation: Block or rate-limit the IP; enable account lockout and MFA.
+
+  - id: AUTH-002
+    name: Password spraying
+    severity: high
+    type: distinct_count
+    log_type: authentication
+    conditions: {status: failure}
+    group_by: [src_ip]
+    field: user
+    threshold: 10
+    window: 300
+    mitre: [T1110.003]
+    description: One IP failed to log in as 10+ different users in 5 minutes.
+    recommendation: Block the IP and check whether any account succeeded.
+
+  - id: AUTH-003
+    name: Successful login after brute force (possible compromise)
+    severity: critical
+    type: sequence
+    log_type: authentication
+    group_by: [src_ip, user]
+    window: 300
+    steps:
+      - conditions: {status: failure}
+        count: 5
+      - conditions: {status: success}
+    mitre: [T1110, T1078]
+    description: 5+ failures followed by a success for the same user from the same IP.
+    recommendation: Force password reset, kill sessions, review account activity.
+
+  - id: AUTH-004
+    name: Login from impossible / unusual country
+    severity: medium
+    type: match
+    log_type: authentication
+    conditions:
+      status: success
+      geo_country|nin: $lists.allowed_countries   # edit in config.yml
+      geo_country|exists: true
+    group_by: [user, geo_country]
+    mitre: [T1078]
+    description: Successful login from a country outside the allowed list.
+    recommendation: Verify with the user; enforce MFA.
+
+  - id: WEB-001
+    name: SQL injection attempt
+    severity: high
+    type: match
+    log_type: web_server
+    conditions:
+      url|regex: "(union(\\s|%20|\\+)+select|or(\\s|%20|\\+)+1=1|sleep\\(\\d+\\)|information_schema|'--)"
+    group_by: [src_ip]
+    mitre: [T1190]
+    description: Request contains common SQL-injection patterns.
+    recommendation: Check app responses (status/size) and patch or add WAF rules.
+
+  - id: WEB-002
+    name: Path traversal / sensitive file probe
+    severity: high
+    type: match
+    log_type: web_server
+    conditions:
+      url|regex: '(\.\./|%2e%2e%2f|/etc/passwd|wp-config\.php|\.env$|\.git/)'
+    group_by: [src_ip]
+    mitre: [T1083, T1190]
+    description: Request tries to read files outside the web root.
+    recommendation: Verify the server is not leaking files; block the source.
+
+  - id: WEB-003
+    name: Known attack tool user-agent
+    severity: medium
+    type: match
+    log_type: web_server
+    conditions:
+      user_agent|contains_any: [sqlmap, nikto, nmap, masscan, dirbuster, gobuster, wpscan]
+    group_by: [src_ip]
+    mitre: [T1595.002]
+    description: Web request came from a well-known scanning/attack tool.
+    recommendation: Block the IP; review logs for follow-up requests.
+
+  - id: WEB-004
+    name: Web scan - many 404 responses
+    severity: medium
+    type: threshold
+    log_type: web_server
+    conditions: {status_code: 404}
+    group_by: [src_ip]
+    threshold: 30
+    window: 60
+    mitre: [T1595.003]
+    description: 30+ not-found responses to one IP in a minute (directory brute forcing).
+    recommendation: Rate-limit or block the IP.
+
+  - id: WEB-005
+    name: Possible web shell access
+    severity: critical
+    type: match
+    log_type: web_server
+    conditions:
+      url|regex: '(c99|r57|b374k|webshell|cmd)\.(php|jsp|aspx)'
+      status_code: 200
+    group_by: [src_ip]
+    mitre: [T1505.003]
+    description: Successful request to a file name typical of web shells.
+    recommendation: Search web root for unknown files; isolate the server.
+
+  - id: APP-001
+    name: Application API abuse (rate limit hits)
+    severity: medium
+    type: threshold
+    log_type: application
+    conditions: {event: rate_limit_exceeded}
+    group_by: [src_ip]
+    threshold: 20
+    window: 60
+    mitre: [T1499.003]
+    description: One client repeatedly exceeded API rate limits.
+    recommendation: Block or throttle the client; check for scraping/credential stuffing.
+
+  - id: APP-002
+    name: Application privilege escalation / admin action by non-admin
+    severity: high
+    type: match
+    log_type: application
+    conditions:
+      event: [role_changed, admin_access]
+      user_role|ne: admin
+    group_by: [user]
+    mitre: [T1068]
+    description: A non-admin user performed a privileged action.
+    recommendation: Review application authorization checks and the user's activity.
+
+  - id: APP-003
+    name: Application errors burst (possible exploitation)
+    severity: medium
+    type: threshold
+    log_type: application
+    conditions: {level: [error, critical]}
+    group_by: [app]
+    threshold: 50
+    window: 60
+    mitre: [T1499]
+    description: 50+ errors in a minute from one application.
+    recommendation: Check for exploitation attempts or service failure.

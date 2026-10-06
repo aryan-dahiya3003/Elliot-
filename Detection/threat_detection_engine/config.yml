@@ -1,0 +1,38 @@
+# Engine configuration
+# field_aliases lets the engine understand differently-named fields from the
+# collector/normalizer. Left side = canonical name used by the rules.
+# Right side = other names that may appear in the normalized logs.
+field_aliases:
+  timestamp:    [time, "@timestamp", ts, event_time]
+  log_type:     [source_type, logsource, type]
+  src_ip:       [source_ip, src, client_ip, source.ip]
+  dst_ip:       [destination_ip, dest_ip, dst, destination.ip]
+  src_port:     [source_port]
+  dst_port:     [destination_port, dest_port]
+  user:         [username, user_name, account]
+  host:         [hostname, computer, device]
+  process_name: [process, image, exe]
+  command_line: [cmdline, command, commandline]
+  event_id:     [eventid, event_code]
+  status:       [outcome, result]
+  url:          [uri, request_uri, path]
+  user_agent:   [ua, useragent]
+  bytes_out:    [bytes_sent, out_bytes]
+
+alerts:
+  min_severity: low          # low | medium | high | critical
+  dedupe_seconds: 120        # suppress identical (rule + group) alerts inside this window
+  console: true
+  color: true
+  json_file: output/alerts.jsonl
+  evidence_limit: 5          # max raw events stored inside each alert
+
+# Environment-specific values used by rules (referenced in rules as $lists.<name>).
+# EDIT THESE for your network - no need to touch the rule files.
+lists:
+  approved_dhcp_servers: ["10.0.0.1"]                 # used by DHCP-001
+  allowed_countries: [IN, US]                         # used by AUTH-004
+  bad_domains:                                        # used by DNS-003
+    - evil-c2.example
+    - malware-drop.example
+    - badcdn.example
