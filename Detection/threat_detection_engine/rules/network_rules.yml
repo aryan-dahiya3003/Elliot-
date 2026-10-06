@@ -1,0 +1,139 @@
+# Network-side rules: Firewall, DNS, DHCP, Network Flow, IDS/IPS
+rules:
+  - id: FW-001
+    name: Port scan detected (firewall)
+    severity: high
+    type: distinct_count
+    log_type: firewall
+    conditions: {action: [deny, drop, block]}
+    group_by: [src_ip]
+    field: dst_port
+    threshold: 15
+    window: 60
+    mitre: [T1046]
+    description: One source hit 15+ different ports and was blocked within 60 seconds.
+    recommendation: Block the source IP at the perimeter and review what it reached.
+
+  - id: FW-002
+    name: High volume of blocked connections
+    severity: medium
+    type: threshold
+    log_type: firewall
+    conditions: {action: [deny, drop, block]}
+    group_by: [src_ip]
+    threshold: 40
+    window: 60
+    mitre: [T1595]
+    description: A single source generated 40+ blocked connections in 60 seconds.
+    recommendation: Check whether this is a scanner, worm or misconfigured host.
+
+  - id: DNS-001
+    name: Possible DGA / random-looking domain
+    severity: medium
+    type: match
+    log_type: dns
+    conditions:
+      query|regex: '^[a-z0-9]{25,}\.[a-z]{2,}$'
+    group_by: [src_ip]
+    mitre: [T1568.002]
+    description: DNS query for a long random-looking domain, typical of malware domain generation.
+    recommendation: Investigate the host that made the query and check for malware.
+
+  - id: DNS-002
+    name: DNS tunneling suspected (many TXT queries)
+    severity: high
+    type: threshold
+    log_type: dns
+    conditions: {record_type: TXT}
+    group_by: [src_ip]
+    threshold: 20
+    window: 60
+    mitre: [T1071.004, T1048]
+    description: 20+ TXT lookups in a minute from one host; data may be hidden in DNS.
+    recommendation: Isolate the host and inspect the queried domain.
+
+  - id: DNS-003
+    name: Query to known-bad / C2 domain
+    severity: critical
+    type: match
+    log_type: dns
+    conditions:
+      query|contains_any: $lists.bad_domains   # edit in config.yml
+    group_by: [src_ip, query]
+    mitre: [T1071.004]
+    description: Host resolved a domain on the threat blocklist.
+    recommendation: Isolate the host immediately and start incident response.
+
+  - id: DHCP-001
+    name: Rogue DHCP server
+    severity: high
+    type: match
+    log_type: dhcp
+    conditions:
+      action: offer
+      server_ip|nin: $lists.approved_dhcp_servers   # edit in config.yml
+    group_by: [server_ip]
+    mitre: [T1557]
+    description: A DHCP offer came from a server that is not on the approved list.
+    recommendation: Find and unplug the rogue device; enable DHCP snooping on switches.
+
+  - id: DHCP-002
+    name: DHCP starvation attack
+    severity: high
+    type: distinct_count
+    log_type: dhcp
+    conditions: {action: request}
+    field: mac
+    threshold: 25
+    window: 30
+    mitre: [T1499]
+    description: 25+ different MAC addresses requested leases within 30 seconds.
+    recommendation: Enable port security on switches to limit MACs per port.
+
+  - id: FLOW-001
+    name: Possible data exfiltration (large outbound transfer)
+    severity: high
+    type: match
+    log_type: network_flow
+    conditions:
+      bytes_out|gt: 500000000
+      direction: outbound
+    group_by: [src_ip, dst_ip]
+    mitre: [T1041]
+    description: Over 500 MB sent to one external destination in one flow.
+    recommendation: Confirm business need; otherwise block destination and investigate host.
+
+  - id: FLOW-002
+    name: Connection to common C2 / backdoor port
+    severity: medium
+    type: match
+    log_type: network_flow
+    conditions: {dst_port: [4444, 1337, 31337, 6667]}
+    group_by: [src_ip, dst_ip]
+    mitre: [T1571]
+    description: Traffic to a port commonly used by reverse shells and botnets.
+    recommendation: Inspect the process on the source host.
+
+  - id: FLOW-003
+    name: Network scanning (flow data)
+    severity: medium
+    type: distinct_count
+    log_type: network_flow
+    group_by: [src_ip]
+    field: dst_ip
+    threshold: 30
+    window: 60
+    mitre: [T1018]
+    description: One host contacted 30+ different destinations in a minute (sweep).
+    recommendation: Verify the host is an approved scanner, otherwise investigate.
+
+  - id: IDS-001
+    name: High-priority IDS/IPS signature
+    severity: high
+    type: match
+    log_type: ids_ips
+    conditions: {priority|lte: 1}
+    group_by: [src_ip, signature]
+    mitre: [T1190]
+    description: The IDS/IPS raised a priority-1 signature.
+    recommendation: Review the signature and the targeted asset.

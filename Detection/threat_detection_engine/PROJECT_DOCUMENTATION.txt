@@ -1,0 +1,392 @@
+==============================================================================
+ THREAT DETECTION ENGINE  -  COMPLETE PROJECT DOCUMENTATION
+==============================================================================
+
+1. WHAT IS THIS PROJECT?
+------------------------------------------------------------------------------
+A mini SIEM-style detection engine written in Python. It reads NORMALIZED logs
+(produced by the log collector/normalizer built by a friend), checks every
+event against detection rules written in YAML (the "rulebook"), and when a rule
+fires it raises an ALERT through an alert system that is built into the engine.
+
+Pipeline:
+
+  12 log sources --> Collector + Normalizer --> normalized JSONL logs
+        (friend's system)                              |
+                                                        v
+                               [ loader.py ]  clean fields, parse time
+                                                        |
+                                                        v
+                               [ detector.py ] evaluate events vs YAML rules
+                                    ^                   |
+                                    |                   v
+                             [ rules.py ]        [ alerts.py ] dedupe, filter,
+                             loads/validates       print to console + save
+                             rules/*.yml           alerts.jsonl
+
+The 12 supported log types (value of the "log_type" field):
+  firewall, dns, dhcp, linux, windows, authentication, web_server,
+  application, network_flow, ids_ips, file_audit, endpoint_edr
+(Names like "IDS/IPS" or "Network Flow" are auto-converted to ids_ips and
+network_flow by the loader.)
+
+
+2. HOW TO RUN
+------------------------------------------------------------------------------
+ONE COMMAND (recommended) - does everything automatically:
+
+  python run.py                              full pipeline on the sample data
+  python run.py --logs my_logs.jsonl         full pipeline on your own logs
+  python run.py --logs live.jsonl --follow   full pipeline, then live watching
+  (options: --no-color  --skip-tests;  on Linux/macOS use python3 if needed)
+
+  It runs these steps in order and stops with a clear message if one fails:
+    1. checks the Python version (3.8+)
+    2. installs the requirements if missing (if a normal install is blocked,
+       it creates a private .venv folder and uses that automatically)
+    3. validates all YAML rules and the config
+    4. runs the automated tests (a failing test stops the run)
+    5. runs the detection engine (batch, or live with --follow)
+
+Individual commands (what run.py runs for you, if you want them one by one):
+  pip install -r requirements.txt            (only needs PyYAML)
+  python main.py                             run on built-in sample data
+  python main.py --logs my_logs.jsonl        run on your real normalized logs
+  python main.py --logs my_logs.jsonl --follow   live mode (like tail -F; shows
+                                             only lines added AFTER it starts;
+                                             appends to output/alerts.jsonl)
+  python main.py --validate-rules            only check the YAML rules
+  python main.py --no-color                  plain output (for files/pipes)
+  python sample_data/generate_sample.py      regenerate the sample data
+  python -m unittest discover -s tests -v    run the automated tests
+
+Requires Python 3.8+.  Tested on Python 3.12.
+
+
+3. FILE-BY-FILE EXPLANATION  (17 files total)
+------------------------------------------------------------------------------
+threat_detection_engine/
+|
+|-- run.py                   ONE-COMMAND LAUNCHER. Checks Python, installs the
+|                            requirements, validates rules, runs the tests and
+|                            then starts main.py - all in a single command.
+|
+|-- main.py                  ENGINE ENTRY POINT. Parses command-line options, loads
+|                            config + rules, wires the loader, detector and
+|                            alert system together, runs them, prints summary.
+|                            Created so the whole project starts with one command.
+|
+|-- config.yml               Settings: (a) field_aliases - maps your friend's
+|                            field names to the names the rules use (so the
+|                            engine works even if the normalizer calls it
+|                            "source_ip" instead of "src_ip"); (b) alert
+|                            settings - minimum severity, dedupe window, color,
+|                            output file, evidence limit; (c) lists - the
+|                            environment-specific values (approved DHCP
+|                            servers, allowed countries, bad domains) that
+|                            rules refer to as $lists.<name>.
+|
+|-- requirements.txt         Python dependency list (PyYAML).
+|
+|-- PROJECT_DOCUMENTATION.txt   This file.
+|
+|-- engine/                  The Python package containing the real logic.
+|   |-- __init__.py          Marks the folder as a package (one-line docstring).
+|   |-- loader.py            Reads JSONL logs; renames alias fields to
+|   |                        canonical names; converts timestamps to numbers
+|   |                        (ISO-8601, epoch s/ms/us/ns, numeric strings,
+|   |                        Apache, RFC-2822, syslog); canonicalizes log_type;
+|   |                        batch mode (read + sort by time) and follow mode
+|   |                        (tail -F: waits for the file, handles half-written
+|   |                        lines and log rotation). Skips and counts corrupt
+|   |                        lines (bad JSON, non-objects, bad time) - never
+|   |                        crashes on them.
+|   |-- rules.py             Loads every *.yml in rules/, VALIDATES them (bad
+|   |                        severity/type/operator/duplicate id -> clear error
+|   |                        message), and contains the condition-matching
+|   |                        operators (eq, in, contains, regex, gt ...).
+|   |-- detector.py          The brain. Receives one event at a time and runs
+|   |                        it through every rule. Handles the 4 rule types
+|   |                        (match, threshold, distinct_count, sequence) using
+|   |                        sliding time windows kept in memory. Cleans up idle
+|   |                        windows periodically (live mode memory), and
+|   |                        reports events it could not group (missing field).
+|   '-- alerts.py            The ALERT SYSTEM (integrated in the engine).
+|                            Builds the alert object, applies minimum-severity
+|                            filter, de-duplicates repeated alerts, sends them
+|                            to handlers (coloured console + JSON-lines file),
+|                            and prints the final summary.
+|
+|-- rules/                   THE YAML RULEBOOK (34 rules). Editable without
+|   |                        touching Python - that is the point of the design.
+|   |-- network_rules.yml    11 rules: Firewall, DNS, DHCP, Network Flow, IDS/IPS
+|   |-- host_rules.yml       11 rules: Linux, Windows, File/Audit, Endpoint/EDR
+|   '-- identity_web_rules.yml  12 rules: Authentication, Web Server, Application
+|
+|-- sample_data/
+|   |-- generate_sample.py   Script that creates realistic test logs: normal
+|   |                        background traffic plus ~25 embedded attacks.
+|   '-- normalized_logs.jsonl   Its output: 757 events across all 12 log types.
+|
+|-- tests/
+|   '-- test_engine.py       22 automated unit tests (rule loading, operators,
+|                            each rule type, time window, de-duplication, bad
+|                            rule rejection, benign traffic = no alert,
+|                            timestamp formats, bad input lines, missing group
+|                            fields, config lists, memory clean-up, live tail
+|                            with partial lines and log rotation).
+|
+'-- output/
+    '-- alerts.jsonl         Created at run time. One JSON alert per line, ready
+                             to be shipped to a SIEM, dashboard, or ticket tool.
+                             (Overwritten each run.)
+
+The project has 17 files in total: 15 hand-written files plus 2 generated data
+files (sample_data/normalized_logs.jsonl and output/alerts.jsonl).
+Breakdown: 5 Python files in engine/, 1 main.py, 1 run.py, 1 sample generator, 1 test file,
+3 YAML rule files, 1 config.yml, 1 requirements.txt, 1 documentation file.
+
+
+4. TECHNOLOGIES AND LIBRARIES USED, AND WHY
+------------------------------------------------------------------------------
+Python 3
+  Standard language for security tooling; readable, huge ecosystem, easy for
+  a team to extend.
+
+PyYAML (the ONLY third-party library)
+  Parses the rulebook and config. YAML was chosen because it is human-readable,
+  supports comments, and lets analysts write rules without programming.
+  We use yaml.safe_load() (never yaml.load) so a malicious rule file cannot
+  execute code.
+
+Python standard library (no install needed):
+  json        - logs are JSON Lines; also used to write alerts.
+  re          - regular expressions for patterns (SQL injection, DGA, etc.).
+  collections - deque (sliding time windows) and defaultdict (per-key state).
+  datetime    - timestamp parsing and UTC output.
+  argparse    - command-line options.
+  functools   - lru_cache so each regex is compiled only once (speed).
+  uuid        - short unique alert IDs.
+  glob/os     - finding rule and log files.
+  time        - polling in follow mode.
+  unittest    - tests, so the project needs no extra test library.
+  subprocess/venv/sys - used by run.py to run each step and, if needed, create
+                a private virtual environment for the requirements.
+
+JSON Lines (.jsonl) format
+  One JSON object per line. Easy to append, stream, and read line-by-line
+  without loading a huge file in one go.
+
+MITRE ATT&CK
+  Every rule has a "mitre" tag (e.g. T1110 = Brute Force) so alerts can be
+  mapped to the industry-standard attacker-technique framework.
+
+ANSI colours
+  Console output is coloured by severity (cyan/yellow/red/magenta) so the
+  important alerts stand out. Disable with --no-color.
+
+
+5. NORMALIZED LOG FORMAT EXPECTED
+------------------------------------------------------------------------------
+One JSON object per line. Required: "timestamp" and "log_type". Other common
+fields (all optional; use whatever your normalizer provides):
+
+  src_ip, dst_ip, src_port, dst_port, protocol, action, user, host, status,
+  event_id, message, process_name, parent_process, command_line, url,
+  status_code, user_agent, query, record_type, bytes_out, direction, mac,
+  server_ip, file_path, signature, priority, app, level, event, user_role,
+  geo_country
+
+Example:
+  {"timestamp":"2026-10-04T09:01:40Z","log_type":"firewall",
+   "src_ip":"203.0.113.50","dst_port":22,"action":"deny"}
+
+Timestamps may be ISO-8601, epoch seconds/milliseconds/microseconds/nanoseconds
+(number or text), Apache "04/Oct/2026:09:01:40 +0000", RFC-2822, or syslog
+"Oct  4 09:01:40" (syslog has no year: the current year, UTC, is assumed).
+A line that is not a JSON object, or has no readable time, is skipped + counted.
+
+IMPORTANT: if your friend's field names differ, DO NOT edit the Python code.
+Add the names under field_aliases in config.yml, or edit field names inside the
+rules. A missing field means the rule does not match that event. If the missing
+field is one a rule needs for grouping (group_by), the end-of-run summary prints
+a NOTE naming the rule and field, so the problem is no longer silent. (Match
+rules still fire and show the missing group field as "unknown".)
+
+
+6. HOW A RULE LOOKS AND WORKS
+------------------------------------------------------------------------------
+  - id: LNX-001                      unique ID
+    name: SSH brute force            title shown in the alert
+    severity: high                   low | medium | high | critical
+    type: threshold                  match | threshold | distinct_count | sequence
+    log_type: linux                  which log source(s) it applies to
+    conditions: {message|contains: Failed password}   all must be true (AND)
+    group_by: [src_ip]               count separately per source IP
+    threshold: 6                     fire at 6 events...
+    window: 60                       ...within 60 seconds
+    mitre: [T1110]                   ATT&CK technique
+    description: ...                 shown in the alert
+    recommendation: ...              what the analyst should do
+
+Rule types:
+  match           Fires on a SINGLE event (e.g. event_id 1102 log cleared).
+  threshold       Fires when N matching events happen within X seconds per
+                  group (brute force, scans, ransomware file changes).
+  distinct_count  Fires when N DIFFERENT values of a field are seen within X
+                  seconds (port scan = many ports; password spray = many users).
+  sequence        Fires when steps happen in order within a window for the same
+                  group (5 failed logins THEN a success = likely compromise).
+
+Condition operators (written as  field|operator: value):
+  eq (default for single value), in (default for a list), ne, nin, contains,
+  contains_any, startswith, endswith, regex, gt, gte, lt, lte, exists.
+  Text comparison is case-insensitive.
+
+Extra: "any_of" lets you list several alternative condition groups (OR logic);
+"enabled: false" disables a rule; dotted names (process.name) read nested JSON;
+a value written as  $lists.name  is replaced by the list called "name" under
+lists: in config.yml (an unknown name fails with a clear error).
+
+To ADD a rule: copy an existing rule into any .yml file under rules/, change
+the fields, run  python main.py --validate-rules.  No code change, no restart
+of anything else.
+
+
+7. THE RULE COVERAGE  (34 rules)
+------------------------------------------------------------------------------
+Firewall      FW-001 port scan; FW-002 many blocked connections
+DNS           DNS-001 DGA domain; DNS-002 DNS tunneling; DNS-003 known C2 domain
+DHCP          DHCP-001 rogue DHCP server; DHCP-002 DHCP starvation
+Linux         LNX-001 SSH brute force; LNX-002 shadow/SSH key access;
+              LNX-003 reverse shell
+Windows       WIN-001 log cleared; WIN-002 added to privileged group;
+              WIN-003 new account created
+Authentication AUTH-001 brute force; AUTH-002 password spraying;
+              AUTH-003 success after brute force; AUTH-004 unusual country
+Web Server    WEB-001 SQL injection; WEB-002 path traversal; WEB-003 attack-tool
+              user-agent; WEB-004 many 404s; WEB-005 web shell
+Application   APP-001 API rate-limit abuse; APP-002 privilege abuse;
+              APP-003 error burst
+Network Flow  FLOW-001 exfiltration; FLOW-002 C2 port; FLOW-003 network sweep
+IDS/IPS       IDS-001 priority-1 signature
+File/Audit    FILE-001 mass file changes (ransomware); FILE-002 ransomware ext.
+Endpoint/EDR  EDR-001 encoded PowerShell; EDR-002 credential dumping;
+              EDR-003 Office spawning a shell
+
+
+8. ALERT SYSTEM DETAILS
+------------------------------------------------------------------------------
+Integrated: the detector calls AlertManager.raise_alert() directly - there is
+no separate service or message queue.
+
+Each alert contains: alert_id, rule_id, rule_name, severity, description,
+mitre list, recommendation, group (e.g. which src_ip), event_time,
+evidence_count, and up to 5 raw evidence events.
+
+Features:
+  * Severity filter  - config alerts.min_severity.
+  * De-duplication   - same rule + same group is reported once per
+                       dedupe_seconds (default 120) so one attacker does not
+                       flood the screen. Suppressed count shown in summary.
+  * Window reset     - after a threshold/distinct alert, its window is cleared.
+  * Handlers         - ConsoleHandler (coloured) and JsonFileHandler
+                       (output/alerts.jsonl; overwritten in batch mode,
+                       appended to in --follow mode). Adding email/Slack/syslog later
+                       = write a class with handle(alert) and add it to the
+                       handler list in main.py.
+  * Summary          - totals per severity and per rule at the end of a run.
+
+
+9. DESIGN DECISIONS (WHY IT IS BUILT THIS WAY)
+------------------------------------------------------------------------------
+- Rules in YAML, logic in Python: analysts can change detections without
+  programming, and engine code stays small and stable.
+- Field aliases: normalizer field names vary; this avoids code changes.
+- Streaming design (process one event at a time): the same detector works for
+  batch files and live tailing; memory use is bounded by the sliding windows.
+- Event time, not wall-clock time: windows use the log's own timestamp, so
+  replaying old logs gives the same result as live running.
+- Validation at load time: a typo in a rule fails immediately with a clear
+  message instead of silently never firing.
+- Only one dependency: easy to install and audit.
+
+
+10. TEST RESULTS (sample data)
+------------------------------------------------------------------------------
+- 22/22 unit tests pass (also run automatically as step 4 of run.py).
+- 757 events (12 log types) processed; 27 alerts raised (8 critical, 14 high,
+  5 medium); 59 duplicate alerts suppressed; 0 alerts on the normal traffic.
+- Rules not triggered by the sample data: FW-002, DHCP-002, FLOW-003, WIN-003,
+  APP-003, LNX-002. They were checked separately with hand-made events and fire
+  correctly.
+
+
+11. LIMITATIONS AND HONEST NOTES
+------------------------------------------------------------------------------
+- State is in memory: restarting live mode forgets the open windows (idle
+  windows are also dropped automatically while running, so memory stays bounded).
+- Single process, single thread; fine for thousands of events/second at most,
+  not enterprise scale. For large volume use a stream platform (Kafka etc.).
+- Live mode follows ONE file (not a folder). It handles rotation/truncation, but
+  lines written while the engine was not running are not read.
+- Field names in rules (e.g. status, event_id, geo_country) are ASSUMPTIONS
+  about the normalized schema. They must be checked against the real output
+  of the friend's normalizer.
+- Environment-specific values must be edited in config.yml under lists: (DHCP
+  approved servers, allowed countries, bad domains). Thresholds inside the rule
+  files (FLOW, FW, AUTH ...) still need tuning on real traffic to reduce false
+  positives.
+- Rules detect known patterns; they do not do machine-learning anomaly
+  detection or threat-intel feed lookups.
+- Alerts are not yet sent to email/Slack and there is no web dashboard.
+
+
+12. FUTURE IMPROVEMENTS
+------------------------------------------------------------------------------
+Email/Slack/webhook handlers; web dashboard; persistent state (Redis/SQLite) so live mode survives restarts;
+threat-intel feeds (IP/domain blocklists loaded from files); rule hot-reload;
+allow-lists to suppress known-good hosts; correlation across log types
+(e.g. firewall block + EDR alert on the same host); Sigma rule import;
+severity scoring per asset; unit tests per rule file.
+
+
+13. QUESTIONS PEOPLE MAY ASK
+------------------------------------------------------------------------------
+Q: Why YAML and not hard-coded Python rules?
+A: Readability, easy editing by non-programmers, version control friendly.
+
+Q: How is this different from a SIEM like Splunk/Wazuh?
+A: Same core idea (rules over normalized logs), but this is small, readable and
+   built for learning/customization; it lacks their scale, UI and integrations.
+
+Q: What happens if a log line is corrupt?
+A: It is skipped and counted ("unreadable lines skipped"); the run continues.
+   This covers broken JSON, lines that are not JSON objects, and lines whose
+   timestamp cannot be understood. A wrong file path gives a clear error message.
+
+Q: Why do some alerts not appear even though attacks happened?
+A: Possibly de-duplication, min_severity filter, a field name mismatch with
+   your normalizer (check field_aliases and the NOTE printed at the end of the
+   run), or the threshold not reached.
+
+Q: How do I test a new rule?
+A: Add it, run --validate-rules, then feed it a small JSONL file containing the
+   attack events. Add a case to tests/test_engine.py.
+
+Q: Does it work in real time?
+A: Yes, with --follow it tails a log file and alerts as lines arrive.
+
+Q: Where do alerts go?
+A: Screen (coloured) and output/alerts.jsonl.
+
+Q: How does the sequence rule work?
+A: Per group it tracks progress through the steps; if the window expires the
+   progress resets; when the last step matches, it alerts.
+
+Q: Is it safe to load rules from YAML?
+A: Yes, safe_load is used, so rule files cannot run code.
+
+==============================================================================
+ END OF DOCUMENT
+==============================================================================

